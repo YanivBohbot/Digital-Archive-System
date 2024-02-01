@@ -1,0 +1,225 @@
+@import "variables";
+
+.mdc-dialog {
+    .mdc-dialog__content {
+        p {
+            color: $textColor1;
+            font-size: 16px;
+            line-height: 20px;
+
+            &.fz20 {
+                font-size: 20px;
+                line-height: 25px;
+            }
+
+            &.line-height30 {
+                line-height: 30px;
+            }
+
+            &.center {
+                text-align: center;
+            }
+
+            &.pb15 {
+                padding-bottom: 15px;
+            }
+
+            span {
+                &.bold {
+                    font-weight: 700;
+                }
+            }
+
+            &.w300 {
+                max-width: 300px;
+            }
+        }
+    }
+    .dialog-wrapper {
+        .inner-title {
+            padding: 10px 24px;
+            font-size: 24px;
+            line-height: 30px;
+            padding-left: 10px;
+            font-weight: 500;
+        }
+
+        .dialog-btnWrap {
+            width: 100%;
+            padding-top: 15px;
+            button {
+                width: 50% !important;
+                height: 30px;
+                color: $textColor2;
+            }
+        }
+    }
+    .mat-mdc-dialog-actions {
+        .buttonStyle.buttonSmaller {
+            background-color: $accentColor1;
+            color: $textColor2;
+            height: 30px;
+            padding: 0px 10px;
+            border: 0;
+            font-size: 16px;
+            border-radius: 0;
+            font-weight: 700;
+        }
+    }
+}
+
+.mat-mdc-dialog-container .mdc-dialog__content {
+    font-family: "Assistant-Bold", "Assistant Bold", "Assistant", sans-serif !important;
+    scrollbar-color: $scrollbarColor1 $scrollbarColor2;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar-track {
+        background-color: $scrollbarColor2;
+        border-radius: 30px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        background-color: $scrollbarColor2;
+        border-radius: 30px;
+        background-clip: padding-box;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $scrollbarColor1;
+        border-radius: 30px;
+    }
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: 0 !important;
+}
+
+.mdc-dialog {
+    .mdc-dialog__content.dialogWrap {
+        padding: 15px 31px 15px 22px;
+        min-width: 288px;
+        color: $textColor1;
+        scrollbar-color: $scrollbarColor1 $scrollbarColor2;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar-track {
+            background-color: $scrollbarColor2;
+            border-radius: 30px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+            background-color: $scrollbarColor2;
+            border-radius: 30px;
+            background-clip: padding-box;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $scrollbarColor1;
+            border-radius: 30px;
+        }
+
+        .dialogHeaderWrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 22px;
+
+            @media (max-width: 600px) {
+                align-items: flex-start;
+            }
+            &.pb10 {
+                padding-bottom: 10px;
+            }
+            h2 {
+                font-size: 24px;
+                line-height: 30px;
+                padding-left: 10px;
+                font-weight: 500;
+
+                &.fz18 {
+                    font-size: 18px;
+                    line-height: 22px;
+                    font-weight: 700;
+                }
+            }
+            &.flex-end {
+                justify-content: flex-end;
+            }
+        }
+
+        &.dialoStyle2 {
+            padding: 20px 20px 26px 15px;
+            min-width: 410px;
+
+            @media (max-width: 600px) {
+                min-width: unset;
+                padding: 15px 10px;
+            }
+        }
+
+        &.dialoStyle3 {
+            min-width: 425px;
+
+            @media (max-width: 600px) {
+                min-width: unset;
+                padding: 15px 10px;
+            }
+        }
+
+        &.dialoStyle4 {
+            max-width: 485px;
+            max-height: 289px;
+            min-height: 289px;
+
+            @media (max-width: 600px) {
+                min-width: unset;
+                padding: 15px 10px;
+            }
+
+            .mat-mdc-form-field-hint-wrapper,
+            .mat-mdc-form-field-error-wrapper {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 0;
+            }
+        }
+
+        h3 {
+            font-size: 16px;
+            &.pb22 {
+                padding-bottom: 22px;
+            }
+        }
+    }
+
+    .mat-mdc-dialog-actions {
+        justify-content: flex-end;
+        padding: 0px 24px 20px 22px;
+
+        .btnWrap {
+            width: 100%;
+            .mdc-button {
+                width: 50%;
+            }
+        }
+    }
+    .actionsBtn {
+        padding-top: 20px;
+        width: 100%;
+
+        &.pb0 {
+            padding-bottom: 0;
+        }
+        .mdc-button {
+            width: 50%;
+            &:first-child {
+                margin-left: 8px;
+            }
+        }
+    }
+}

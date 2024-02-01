@@ -1,0 +1,80 @@
+.mainHeader {
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+      .headerbox {
+            height: 43px;
+            padding: 0px 10px 0px 31px;
+            background-color: #007bb8;
+            box-sizing: border-box;
+
+            @media (max-width: 630px) {
+                  padding: 0px 10px;
+            }
+
+            .headerImgWrap {
+                  .headerImg {
+                        width: 100px;
+                  }
+            }
+
+            .usernameHeader {
+                  p {
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: 500;
+                  }
+            }
+
+            .systemTitle {
+                  @media (max-width: 630px) {
+                        display: none;
+                  }
+            }
+      }
+
+      h1 {
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 700;
+      }
+
+      .systemTitleForMob {
+            display: none;
+
+            @media (max-width: 630px) {
+                  display: block;
+                  background-color: #007bb8;
+                  padding-bottom: 10px;
+            }
+
+            h1 {
+                  @media (max-width: 630px) {
+                        text-align: center;
+                  }
+            }
+      }
+
+      .ScreenNameWrap {
+            background-color: #ffffff;
+            .backgroundheaderScreenNameProject {
+                  background: #007bb8;
+                  height: 43px;
+                  width: 148px;
+
+                  @media (max-width: 630px) {
+                        width: 100%;
+                        height: auto;
+                        padding-bottom: 10px;
+                  }
+                  .screenNameProject {
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: 700;
+                        color: #ffffff;
+                        text-align: center;
+                        padding: 0px 12px 0px 12px;
+                  }
+            }
+      }
+}

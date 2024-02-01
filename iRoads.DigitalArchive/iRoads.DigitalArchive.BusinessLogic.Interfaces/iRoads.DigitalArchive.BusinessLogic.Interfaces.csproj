@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Ness.Framework.BusinessLogic" Version="1.2.5" />
+  </ItemGroup>
+  <ItemGroup>
+  <ProjectReference Include="..\iRoads.DigitalArchive.Entities\iRoads.DigitalArchive.Entities.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.Models\iRoads.DigitalArchive.Models.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.Razor\iRoads.DigitalArchive.Razor.csproj" />
+  </ItemGroup>
+
+</Project>

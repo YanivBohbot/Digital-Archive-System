@@ -1,0 +1,42 @@
+<div>
+    <mat-dialog-content class="dialogWrap">
+        <div class="dialogHeaderWrap">
+            <div class="CloseBtnWrap">
+                <button mat-button class="CloseBtn" mat-dialog-close>
+                    <span class="for-screnReader">סגור</span>
+                    <div class="iconStyle CloseGrayIcon"></div>
+                </button>
+            </div>
+            <h2>בחר אחראי בקרה</h2>
+        </div>
+        <div>
+            <form  class="example-form" dir="rtl">
+                <div class="fieldWrap fieldWrapColumn">
+                    <span class="label" aria-label="id-form-field">אחראי בקרה</span>
+                    <mat-form-field appearance="outline" class="w100">
+                      <mat-select name="controlManager" [(ngModel)]="controlManager" id="rejection_reasons" (selectionChange)="onSelectChanged($event)">
+                        <mat-option *ngFor="let item of projectsSvc.controlManagersList" [value]="item"> {{ item }} </mat-option>
+                      </mat-select>
+                      <button *ngIf="controlManager"
+                              matSuffix
+                              mat-icon-button
+                              type="button"
+                              aria-label="Clear"
+                              (click)="controlManager = null; $event.stopPropagation()">
+                        <mat-icon>clear</mat-icon>
+                      </button>
+                    </mat-form-field>
+                </div>
+            </form>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <div class="display-flex btnWrap">
+            <button mat-button class="btn blue-btn" mat-dialog-close (click)="save()">שמור <div class="iconStyle SaveWhiteIcon">
+                </div></button>
+            <button mat-button class="btn accentColor3-btn" mat-dialog-close> בטל <div class="iconStyle CloseWhiteIcon">
+                </div>
+            </button>
+        </div>
+    </mat-dialog-actions>
+</div>

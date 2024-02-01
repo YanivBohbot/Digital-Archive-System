@@ -1,0 +1,103 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$dark-primary-text: rgba(black, 0.87);
+$dark-secondary-text: rgba(black, 0.54);
+$dark-disabled-text: rgba(black, 0.38);
+$dark-dividers: rgba(black, 0.12);
+$dark-focused: rgba(black, 0.12);
+$light-primary-text: white;
+$light-secondary-text: rgba(white, 1);
+$light-disabled-text: rgba(white, 0.5);
+$light-dividers: rgba(white, 0.12);
+$light-focused: rgba(white, 0.12);
+
+$custom-palette: (
+    50: #e7d8db,
+    100: #dbc6c9,
+    200: #f5e2e2,
+    300: #e2cece,
+    400: #d4c3c3,
+    500: #000000,
+    600: #534f4f,
+    700: #161515,
+    800: rgb(36, 31, 31),
+    900: #2c2424,
+    A100: #1a1616,
+    A200: #200a0a,
+    A400: rgb(228, 217, 220),
+    A700: #beb3b3,
+    contrast: (
+        50: $dark-primary-text,
+        100: $dark-primary-text,
+        200: $dark-primary-text,
+        300: $dark-primary-text,
+        400: $dark-primary-text,
+        500: $light-primary-text,
+        600: $light-primary-text,
+        700: $light-primary-text,
+        800: $light-primary-text,
+        900: $light-primary-text,
+        A100: $dark-primary-text,
+        A200: $light-primary-text,
+        A400: $light-primary-text,
+        A700: $light-primary-text,
+    ),
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$client-app-primary: mat.define-palette($custom-palette);
+$client-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$client-app-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$client-app-theme: mat.define-light-theme(
+    (
+        color: (
+            primary: $client-app-primary,
+            accent: $client-app-accent,
+            warn: $client-app-warn,
+        ),
+    )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($client-app-theme);
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: "Assistant-Bold", "Assistant Bold", "Assistant", sans-serif !important;
+    direction: rtl;
+    font-size: 16px;
+}
+
+//overlay style start
+.cdk-visually-hidden {
+    right: 0;
+}
+//overlay style end
+@import "assets/css/material/general.scss";
+@import "assets/css/material/table.scss";
+@import "assets/css/material/icons.scss";
+@import "assets/css/material/button.scss";
+@import "assets/css/material/form.scss";
+@import "assets/css/material/modal.scss";
+@import "assets/css/material/mat-tab.scss";

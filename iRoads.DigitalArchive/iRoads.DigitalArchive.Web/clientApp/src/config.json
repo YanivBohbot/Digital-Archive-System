@@ -1,0 +1,12 @@
+{
+    "baseUrl": "/api",
+    "isForDemo": false,
+    "isOnlyClient": false,
+    "isUrlDemo": "http://localhost:53247/api",
+    "baseLoginUrl": "http://localhost:39208/api",
+    "outerHost": "https://archiveqaportal.iroads.co.il",
+    "sapDocPrefix": "http://sap-csdev.pwd.comp:1090",
+    "sharePointMNFPrefix": "http://portaldocsqa/sites/ProjectDev/divproject",
+    "sharePointCEOPrefix": "http://docs/sites/CEO/Safety",
+    "sharepointDownloadFilePrefix": "https://sp-wfws-qa.pwd.comp"
+} 

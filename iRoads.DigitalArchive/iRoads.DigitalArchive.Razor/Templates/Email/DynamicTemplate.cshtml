@@ -1,0 +1,55 @@
+﻿@model dynamic
+<!DOCTYPE html>
+<html>
+<head>
+    @{
+        string today = DateTime.Now.ToString("dd/MM/yyyy");
+    }
+</head>
+<body dir="RTL">
+    <div id="&lt;ImageLogo&gt;"></div>
+    <div style="text-align: right;">
+        <h2><span style="font-weight: bold;">@Model.Title</span></h2>
+        <h4 style="text-align: right;">
+            תאריך:<label>@today</label>
+        </h4>
+        לכבוד,
+        <br><label>@Model.User.FullName</label>
+
+        @*@if ((string.IsNullOrEmpty(Model.FirstName2) == false) || (string.IsNullOrEmpty(Model.LastName2) == false))
+            {
+                <label>@Model.FirstName2</label>
+                <label >@Model.LastName2</label><br>
+            }*@
+        מספר זהות:&nbsp;<label>@Model.User.UserId</label> <br>
+        <br>
+        שלום רב,
+        <br>
+        אנו מודים לך על  השתתפותך .<br>
+        <br>
+
+        @*@if (!Model.IsPremiumUser)
+            {
+                <p>
+                    לצערינו, אינך לקוח פרימיום
+                </p>
+            }*@
+        <br><br>
+
+        @*@foreach (var gift in Model.Gifts)
+            {
+                <p>
+                    @Html.ActionLink(gift.Description, "Details", "Gifts", new { giftId = gift.Id })
+                </p>
+            }*@
+
+        אנו מאחלים לך הצלחה,<br>
+        @Model.AppName <br><br>
+
+        * אין להשיב לדוא"ל זה.<br>
+        ** מכתב זה מובא בלשון יחיד מטעמי נוחות, אך מכוון לכל נמען או נמענים באשר הם.<br>
+
+    </div>
+
+</body>
+</html>

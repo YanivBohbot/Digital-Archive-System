@@ -1,0 +1,206 @@
+@import "variables";
+
+.mat-mdc-button .mat-mdc-button-touch-target,
+.mat-mdc-unelevated-button .mat-mdc-button-touch-target,
+.mat-mdc-raised-button .mat-mdc-button-touch-target,
+.mat-mdc-outlined-button .mat-mdc-button-touch-target {
+    height: auto !important;
+}
+
+.mat-mdc-button,
+.mat-mdc-outlined-button {
+    --mat-mdc-button-persistent-ripple-color: transparent;
+    --mat-mdc-button-ripple-color: transparent;
+}
+
+.mat-mdc-button.mat-mdc-button-base,
+.mat-mdc-raised-button.mat-mdc-button-base,
+.mat-mdc-unelevated-button.mat-mdc-button-base,
+.mat-mdc-outlined-button.mat-mdc-button-base {
+    height: 30px;
+}
+
+.mat-mdc-button.mat-unthemed {
+    --mdc-text-button-label-text-color: $textColor2;
+}
+.mat-mdc-button:not(:disabled) {
+    color: $textColor2;
+}
+
+.mdc-button {
+    padding: 0px 10px !important;
+}
+
+button.border0{
+  border: 0;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 0 !important;
+  margin: 0;
+  background-color: unset;
+  transition: all 0.3s ease;
+  border: 0;
+  font-family: "Assistant-Bold", "Assistant Bold", "Assistant", sans-serif !important;
+
+  .mdc-button__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $textColor2;
+  }
+
+  .iconStyle {
+    margin-left: 10px;
+    transition: all 0.3s ease;
+
+    &.iconeRigt {
+      margin-left: 0px;
+      margin-right: 10px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+  }
+
+  &.backBtn{
+    font-size: 22px;
+    line-height: 20px;
+    .ArrowBackIcon{
+      background-size: 8px;
+      width: 12px;
+      height: 17px;
+      margin-top: 2px;
+    }
+  }
+
+  .borderNone {
+    border: 0;
+  }
+
+  &.fz26{
+    font-size: 26px;
+    line-height: 30px;
+    .ArrowBackIcon {
+      background-size: 15px;
+      height: 30px;
+      width: 15px;
+  }
+  }
+
+  &.blue-btn {
+    background-color: $accentColor1;
+    color: $textColor2;
+    height: 30px;
+    padding: 0px 10px;
+
+    &:disabled {
+      background-color: $disabledBgColor;
+      cursor: not-allowed;
+    }
+  }
+
+  &.green-btn {
+    background-color: $accentColor2;
+    color: $textColor2;
+    height: 30px;
+    padding: 0px 10px;
+
+    &:disabled {
+      background-color: $disabledBgColor;
+      cursor: not-allowed;
+    }
+  }
+
+  &.accentColor3-btn {
+    background-color: $accentColor3;
+  }
+
+  &.transparent {
+    background-color: transparent;
+    padding: 0;
+    color: $accentColor1;
+
+    &.mdc-button {
+      padding: 0px !important;
+    }
+
+    .mdc-button__label {
+      color: $accentColor1;
+    }
+
+    .iconStyle {
+      margin-left: 5px;
+
+      &.iconeRigt {
+        margin-left: 0px;
+        margin-right: 5px;
+      }
+    }
+
+    .DonloadArrowIcon {
+      transition: all 0.3s ease;
+      position: relative;
+      top: 0px;
+    }
+
+    .UploadArrowIcon {
+      transform: rotate(180deg);
+    }
+
+    &:hover,
+    &:focus {
+      .DonloadArrowIcon, UploadArrowIcon {
+        top: 2px;
+      }
+    }
+  }
+
+  &.border {
+    border: 1px solid #d7d7d7;
+    padding: 0px 10px !important;
+    height: 30px;
+
+    &:hover,
+    &:focus {
+      background-color: $formHoverBG;
+    }
+  }
+
+  &.mr5 {
+    margin-right: 5px;
+  }
+
+  &.mr10 {
+    margin-right: 5px;
+  }
+
+  &.ml8 {
+    margin-left: 8px;
+  }
+
+  &.w50 {
+    width: 48%;
+  }
+}
+.CloseBtnWrap {
+    .CloseBtn {
+        height: auto;
+        min-width: auto;
+        padding: 0 !important;
+    }
+}
+
+.back-button {
+    background-color: $bgColor1;
+
+    &.absolute {
+        position: absolute;
+        top: 7px;
+        right: 6px;
+    }
+}

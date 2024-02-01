@@ -1,0 +1,9 @@
+{
+  "Status": 0,
+         "Messages":["אין שגיאה"],
+  "Details": {
+    "UserName": "demodemo",
+    "Role":1,
+    "DisplayName":"בדיקה בדיקה"
+  }
+}

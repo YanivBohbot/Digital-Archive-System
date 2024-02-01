@@ -1,0 +1,444 @@
+@import "variables";
+.formInnerWrap {
+    background-color: $bgColor2;
+    border: 1px solid $formElementBorderColor;
+    padding: 15px 15px 0px 10px;
+    margin-bottom: 10px;
+    position: relative;
+
+    &.formInnerWrapScroll {
+        @media (max-width: 800px) {
+            overflow-y: auto;
+            scrollbar-color: $scrollbarColor1 $scrollbarColor2;
+            scrollbar-width: thin;
+            max-height: 359px;
+
+            &::-webkit-scrollbar-track {
+                background-color: $scrollbarColor2;
+                border-radius: 30px;
+            }
+
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 0;
+                background-color: $scrollbarColor2;
+                border-radius: 30px;
+                background-clip: padding-box;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $scrollbarColor1;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    &.serchStyle {
+        @media (max-width: 800px) {
+            padding-top: 60px;
+        }
+        .filter-iconWrap {
+            @media (max-width: 1700px) {
+                position: relative;
+                top: -8px;
+            }
+            @media (max-width: 800px) {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+            }
+        }
+
+        .additional-filters {
+            @media (max-width: 800px) {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+            }
+        }
+
+        .form-row {
+            @media (max-width: 800px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn.green-btn {
+                @media (max-width: 1700px) {
+                    margin-bottom: 15px;
+                }
+
+                @media (max-width: 800px) {
+                    margin-bottom: 5px;
+                }
+            }
+
+            .btn {
+                @media (max-width: 800px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.form-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @media (max-width: 1700px) {
+        align-items: flex-end;
+    }
+
+    &.form-row-top {
+        justify-content: space-between;
+
+        @media (max-width: 1700px) {
+            justify-content: flex-start;
+        }
+    }
+
+    .fieldWrap {
+        flex-wrap: nowrap;
+        width: 15%;
+        margin-left: 16px;
+
+        @media (max-width: 1700px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 1024px) {
+            width: 20%;
+        }
+
+        @media (max-width: 800px) {
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        mat-form-field.mat-mdc-form-field {
+            padding-bottom: 15px;
+            width: 100%;
+        }
+
+        .label {
+            margin-left: 5px;
+            padding-bottom: 15px;
+            width: 148px;
+            white-space: nowrap;
+
+            @media (max-width: 1700px) {
+                padding-bottom: 3px;
+            }
+
+            @media (max-width: 800px) {
+                width: unset;
+            }
+        }
+
+        &.w242 {
+            width: 245px;
+
+            @media (max-width: 1700px) {
+                width: unset;
+            }
+
+            @media (max-width: 800px) {
+                width: 100%;
+            }
+        }
+
+        &.fW2 {
+            width: 19%;
+            @media (max-width: 1570px) {
+                width: 18%;
+            }
+
+            @media (max-width: 1250px) {
+                width: 20%;
+            }
+
+            @media (max-width: 800px) {
+                width: 100%;
+            }
+            mat-form-field.mat-mdc-form-field {
+                &.datepickerWidth {
+                    min-width: 125px;
+                    @media (max-width: 800px) {
+                        min-width: 50%;
+                        flex: 1;
+                    }
+                }
+            }
+        }
+
+        &.fWauto {
+            @media (max-width: 1250px) {
+                width: auto;
+            }
+        }
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+
+    .filter-icon {
+        width: 26px;
+    }
+}
+
+.fieldWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .label {
+        color: #333333;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+        &.ml5 {
+            margin-left: 5px;
+        }
+    }
+
+    &.fieldWrapColumn {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+mat-form-field.mat-mdc-form-field {
+    position: relative;
+
+    &.mb20 {
+        margin-bottom: 20px;
+    }
+
+    &.ml16 {
+        margin-left: 16px;
+    }
+
+    &.ml20 {
+        margin-left: 20px;
+    }
+
+    &.ml5 {
+        margin-left: 5px;
+    }
+
+    &.w147 {
+        width: 147px;
+    }
+
+    &.w100 {
+        width: 100%;
+    }
+
+    &.w97 {
+        width: 97px;
+    }
+
+    &.w130 {
+        width: 130px;
+    }
+
+    &.emptySelect{
+    .mdc-notched-outline{
+        border: 1px solid red;
+    }
+    }
+
+    .SearchIcon {
+        position: absolute;
+        top: 4px;
+        left: 0;
+    }
+    .mat-mdc-text-field-wrapper {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .mat-mdc-form-field-subscript-wrapper {
+        height: 0;
+    }
+    .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+        padding-top: 0;
+        padding-bottom: 0;
+        min-width: 0;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .mdc-text-field--no-label:not(.mdc-text-field--textarea) .mat-mdc-form-field-input-control.mdc-text-field__input,
+    .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control,
+    .mat-mdc-select-value {
+        padding: 4px 4px 0px 4px;
+        box-shadow: inset 0 0 0 13px white;
+        transition: all 0.3s ease;
+    }
+
+    input[type="search"] {
+        padding-left: 25px !important;
+        background-color: transparent !important;
+    }
+
+    .mdc-text-field--outlined {
+        height: 30px;
+        overflow: visible;
+        transition: all 0.3s ease;
+        background-color: $bgColor2;
+    }
+    .mdc-notched-outline__leading,
+    .mdc-notched-outline__notch,
+    .mdc-notched-outline__trailing {
+        border-radius: 0 !important;
+        border-color: $formElementBorderColor !important;
+    }
+
+    .mdc-floating-label {
+        top: 13px !important;
+        right: 0px !important;
+    }
+
+    .mat-datepicker-toggle {
+        color: transparent;
+
+        .mat-mdc-icon-button.mat-mdc-button-base {
+            width: 25px;
+            height: 25px;
+            padding: 0;
+            background-image: url("#{$assetPath}calendar.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 16px;
+            border-radius: 0;
+            margin-bottom: 0;
+            /*margin-top: 3px;*/
+            .mat-mdc-button-touch-target {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+        .mdc-notched-outline--upgraded
+        .mdc-floating-label--float-above {
+        --mat-mdc-form-field-label-transform: translateY(-22.75px)
+            scale(var(--mat-mdc-form-field-floating-label-scale, 0.75));
+        transform: var(--mat-mdc-form-field-label-transform);
+    }
+
+    .mat-mdc-select-arrow {
+        width: 10px;
+        height: 11px;
+        position: relative;
+        background-image: url("#{$assetPath}select.svg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 9px;
+        svg {
+            display: none;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .mdc-text-field--no-label:not(.mdc-text-field--textarea)
+            .mat-mdc-form-field-input-control.mdc-text-field__input,
+        .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control,
+        .mat-mdc-select-value {
+            box-shadow: inset 0 0 0 13px $formHoverBG;
+        }
+
+        .mdc-text-field--outlined {
+            background-color: $formHoverBG;
+        }
+    }
+
+    textarea {
+        resize: none;
+        scrollbar-color: $scrollbarColor1 $scrollbarColor2;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar-track {
+            background-color: $scrollbarColor2;
+            border-radius: 30px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+            background-color: $scrollbarColor2;
+            border-radius: 30px;
+            background-clip: padding-box;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $scrollbarColor1;
+            border-radius: 30px;
+        }
+    }
+
+    &.h92 {
+        min-height: 92px;
+        textarea {
+            min-height: 92px;
+        }
+    }
+}
+
+.checkboxRow {
+    &.ml30 {
+        margin-left: 30px;
+    }
+}
+//mat-checkbox
+.mat-mdc-checkbox.mat-accent {
+    --mdc-checkbox-selected-checkmark-color: #7f7f7f;
+    --mdc-checkbox-selected-focus-icon-color: transparent;
+    --mdc-checkbox-selected-hover-icon-color: transparent;
+    --mdc-checkbox-selected-icon-color: transparent;
+    --mdc-checkbox-selected-pressed-icon-color: transparent;
+    --mdc-checkbox-unselected-focus-icon-color: #212121;
+    --mdc-checkbox-unselected-hover-icon-color: #212121;
+    --mdc-checkbox-disabled-selected-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-checkbox-disabled-unselected-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-checkbox-unselected-icon-color: rgba(0, 0, 0, 0.54);
+    --mdc-checkbox-unselected-pressed-icon-color: rgba(0, 0, 0, 0.54);
+    background-color: transparent;
+    border-color: var(--mdc-checkbox-unselected-icon-color, $formElementBorderColor);
+}
+
+.mdc-checkbox {
+    flex: unset !important;
+    width: 14px !important;
+    height: 14px !important;
+    transform: translateY(2px);
+}
+.mdc-checkbox__background {
+    width: 14px !important;
+    height: 14px !important;
+    border: 1px solid $formElementBorderColor !important;
+    border-radius: 0px !important;
+    background-color: $bgColor2 !important;
+    pointer-events: none;
+    will-change: background-color, border-color;
+    transition: background-color 90ms 0ms cubic-bezier(0.4, 0, 0.6, 1),
+        border-color 90ms 0ms cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.mdc-form-field {
+    font-weight: 500;
+}
+
+//end mat-checkbox
+.requiredStyle {
+    color: $statusFailed;
+    padding-left: 3px;
+}

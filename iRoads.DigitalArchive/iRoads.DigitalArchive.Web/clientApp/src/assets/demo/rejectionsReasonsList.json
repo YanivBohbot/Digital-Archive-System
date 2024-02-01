@@ -1,0 +1,23 @@
+{
+    "rejectionReasonsList": [
+        {
+        "Description": "מסמך חלקי",
+         "Code": 1
+        },
+        {
+         "Description": "מסמך חסר",
+         "Code": 2
+        }
+         ,
+        {"Description": "לא חתום",
+         "Code": 3
+        },
+        { "Description": "איכות סריכה ירוד",
+         "Code": 4
+        }
+      ]
+
+
+}
+
+

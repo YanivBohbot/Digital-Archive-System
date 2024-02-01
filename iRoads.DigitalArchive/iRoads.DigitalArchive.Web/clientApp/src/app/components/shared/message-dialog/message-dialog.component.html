@@ -1,0 +1,13 @@
+<div class="dialog-wrapper" dir="rtl">
+  <h2 class="inner-title">{{ data.title }}</h2>
+  <div mat-dialog-content>
+    <p class="w300" [innerHTML]="data.message"></p>
+  </div>
+  <div mat-dialog-actions>
+    <div class="display-flex dialog-btnWrap">
+      <button mat-button class="btn blue-btn ml8" (click)="close()" cdkFocusInitial> {{ data.okButton }} </button>
+      <button mat-button class="btn accentColor3-btn " *ngIf="data.cancelButton" (click)="cancel()"> {{
+        data.cancelButton }} </button>
+    </div>
+  </div>
+</div>

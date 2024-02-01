@@ -1,0 +1,35 @@
+$bgColor1: #f6f6f6;
+$bgColor2: #ffffff;
+$bgColor3: #efefef;
+
+$textColor1: #333333;
+$textColor2: #ffffff;
+
+$formElementBorderColor: #dddddd;
+$formHoverBG: #e9f8ff;
+
+$tableBorder: #e2e2e2;
+$tableBG: #f0f1f3;
+$tableHoverBG: #e9f8ff;
+
+$assetPath: "~src/assets/images/";
+
+$scrollbarColor1: #d8d7d7;
+$scrollbarColor2: #ebeaef;
+
+$accentColor1: #006699;
+$accentColor2: #009962;
+$accentColor3: #7f7f7f;
+$accentColor4: #f59a23;
+$disabledBgColor: #d7d7d7;
+
+$statusSuccess: #4b7902;
+$statusFailed: #d9001b;
+$statusBefore: #7f7f7f;
+
+$scrollbarColor1: #d8d7d7;
+$scrollbarColor2: #ebeaef;
+
+.mat-mdc-checkbox.mat-accent .mdc-checkbox--selected ~ .mdc-checkbox__ripple {
+    background: $accentColor1;
+}

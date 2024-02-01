@@ -1,0 +1,166 @@
+<div *ngIf="flaghistory == false; else gethistory">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container
+      matColumnDef="Discipline">
+      <mat-header-cell *matHeaderCellDef>דיסציפלינה</mat-header-cell>
+      <mat-cell data-label="דיסציפלינה " *matCellDef="let element">
+        <div class="cellInner">{{ element.Discipline }}</div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="docTypeRequired">
+      <mat-header-cell *matHeaderCellDef>סוג מסמך הנדרש</mat-header-cell>
+      <mat-cell data-label="סוג מסמך הנדרש" *matCellDef="let element">
+        <div class="cellInner">{{ element.Type }}</div>
+      </mat-cell>
+    </ng-container>
+    <ng-container
+      matColumnDef="ElementSubEl">
+      <mat-header-cell *matHeaderCellDef>אלמנט-תת אלמנט</mat-header-cell>
+      <mat-cell data-label="אלמנט-תת אלמנט" *matCellDef="let element">
+        <div class="cellInner">{{ element.Element }}</div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="docName">
+      <mat-header-cell *matHeaderCellDef>שם המסמך</mat-header-cell>
+      <mat-cell
+        data-label="שם המסמך"
+        *matCellDef="let element"
+        class="accentColor1"
+      >
+        <a
+          *ngIf="element.URL"
+          [href]="getURL(element.URL)"
+          target="_blank"
+          class="cellInner"
+          >{{ element.FileName }}
+        </a>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="uploadedInDate">
+      <mat-header-cell *matHeaderCellDef>צורף בתאריך</mat-header-cell>
+      <mat-cell data-label="צורף בתאריך" *matCellDef="let element">
+        <div class="cellInner">
+          {{ element.AttachedDate | date : "dd.MM.yyyy" }}
+        </div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="uploadedBy">
+      <mat-header-cell *matHeaderCellDef>צורף ע"י</mat-header-cell>
+      <mat-cell data-label='צורף ע"י' *matCellDef="let element">
+        <div class="cellInner">{{ element.AttachedBy }}</div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="statusControl">
+      <mat-header-cell *matHeaderCellDef>סטטוס הבקרה</mat-header-cell>
+      <mat-cell data-label="סטטוס הבקרה" *matCellDef="let element">
+        <div
+          class="cellInner space-between"
+          (click)="openUpdateStatusBakara(element)"
+        >
+          {{ getDocStatus(element) }}
+            <div
+              *ngIf="canEditControlStatus"
+              class="iconStyle CursorPointer EditPencilBlueIcon"
+            ></div>
+        </div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="rejectsReason">
+      <mat-header-cell *matHeaderCellDef>סיבת הדחייה</mat-header-cell>
+      <mat-cell data-label="סיבת הדחייה" *matCellDef="let element">
+        <div class="cellInner">{{ element.ReasonRejectDesc }}</div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="dateControl">
+      <mat-header-cell *matHeaderCellDef>תאריך בקרה</mat-header-cell>
+      <mat-cell data-label="תאריך בקרה" *matCellDef="let element">
+        <div class="cellInner">
+          {{ element.ControlDate | date : "dd.MM.yyyy" }}
+        </div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="nameControl">
+      <mat-header-cell *matHeaderCellDef>שם המבקר</mat-header-cell>
+      <mat-cell data-label="שם המבקר" *matCellDef="let element">
+        <div class="cellInner">{{ element.ControlerName }}</div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="comments">
+      <mat-header-cell *matHeaderCellDef>הוסף התייחסות</mat-header-cell>
+      <mat-cell
+        data-label="הוסף התייחסות"
+        *matCellDef="let element"
+        class="center"
+        (click)="AddingCommentsManap(element)"
+      >
+        <div class="cellInner">
+          <button
+            title="button"
+            [title]="tooltip"
+            type="button"
+            [ngClass]="getCommentsClass()"
+            [disabled]="!canManhapComment ? true: null"
+          ></button>
+        </div>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="historyandEdit">
+      <mat-header-cell *matHeaderCellDef>היסטוריה ועריכה</mat-header-cell>
+      <mat-cell
+        data-label="היסטוריה ועריכה"
+        *matCellDef="let element"
+        class="center "
+      >
+        <div class="cellInner">
+          <button
+            title="button-history"
+            [ngClass]="checkForManapCommentsInHistory(element)"
+            (click)="openHistoryDocument(element)"
+          ></button>
+        </div>
+      </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumnsNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumnsNames"></mat-row>
+
+    <ng-container matColumnDef="groupHeader">
+      <mat-cell colspan="999" *matCellDef="let group">
+        <div
+          class="iconStyle expandLessArrowIcon ml9"
+          *ngIf="group.expanded"
+        ></div>
+        <div
+          class="iconStyle expandMoreArrowIcon ml9"
+          *ngIf="!group.expanded"
+        ></div>
+        <strong
+          >{{ group[groupByColumns[group.level - 1]] }} ({{
+            group.totalCounts
+          }})
+        </strong>
+      </mat-cell>
+    </ng-container>
+
+    <mat-row
+      *matRowDef="let row; columns: ['groupHeader']; when: isGroup.bind(this)"
+      (click)="groupHeaderClick(row)"
+    >
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator
+    dir="rtl"
+    #paginator
+    class="demo-paginator"
+    (page)="handlePageEvent($event)"
+    [pageSize]="pageSize"
+    [showFirstLastButtons]="showFirstLastButtons"
+    [pageIndex]="pageNumber"
+  >
+  </mat-paginator>
+</div>
+<ng-template #gethistory>
+  <app-document-history
+    (ButtongoBackclicked)="BackTolistDocument($event)"
+  ></app-document-history>
+</ng-template>

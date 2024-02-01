@@ -1,0 +1,52 @@
+{
+  "Data": {
+    "DesignatedSpace": [
+      {
+        "Code": 1,
+        "Description": "מרחב צפון"
+      },
+      {
+        "Code": 2,
+        "Description": "מרחב מרכז"
+      },
+      {
+        "Code": 3,
+        "Description": "מרחב דרום"
+      },
+      {
+        "Code": 4,
+        "Description": "מרחב איוש"
+      },
+      {
+        "Code": 5,
+        "Description": "מרחב צפון"
+      }
+    ],
+    "RejectReason": [
+      {
+        "Description": "מסמך חלקי",
+        "Code": 1
+      },
+      {
+        "Description": "מסמך חסר",
+        "Code": 2
+      },
+      { "Description": "לא חתום", "Code": 3 },
+      { "Description": "איכות סריכה ירוד", "Code": 4 }
+    ],
+    "DocumentStatus": [
+      {
+        "Description": "תקין",
+        "Code": 1
+      },
+      {
+        "Description": "לא תקין",
+        "Code": 3
+      },
+      {
+        "Description": "לא רלוונטי",
+        "Code": 2
+      }
+    ]
+  }
+}

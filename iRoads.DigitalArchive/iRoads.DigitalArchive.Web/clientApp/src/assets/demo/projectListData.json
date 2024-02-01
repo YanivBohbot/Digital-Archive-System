@@ -1,0 +1,45 @@
+{
+  "Status": 0,
+  "Messages": ["אין שגיאה"],
+  "Data": [
+    {
+      "isStar": false,
+      "projectNum": "MNF-261",
+      "projectDesc": "כביש 1 - משער הגיא עד הכניסה לירושלים",
+      "contractualContract": "4100020711",
+      "currentControlStage": "חשבון סופי קבלן",
+      "currentControlDate": "19.3.2022",
+      "controlStatusMMP": "הושלמה",
+      "controlStatusArchive": "טרם הושלמה",
+      "controlOfficer": "מגי בסו",
+      "MMP": "אלכסנדרה דיבקין",
+      "managementCompany": "ספיבק חברה להנדסה בע״מ"
+    },
+    {
+      "isStar": false,
+      "projectNum": "MNF-261",
+      "projectDesc": "כביש 1 - משער הגיא עד הכניסה לירושלים",
+      "contractualContract": "4100020731",
+      "currentControlStage": "חשבון סופי קבלן",
+      "currentControlDate": "19.3.2022",
+      "controlStatusMMP": "הושלמה",
+      "controlStatusArchive": "טרם הושלמה",
+      "controlOfficer": "מגי בסו",
+      "MMP": "אלכסנדרה דיבקין",
+      "managementCompany": "ספיבק חברה להנדסה בע״מ"
+    },
+    {
+      "isStar": true,
+      "projectNum": "MNF-261",
+      "projectDesc": "כביש 1 - משער הגיא עד הכניסה לירושלים",
+      "contractualContract": "4100020721",
+      "currentControlStage": "חשבון סופי קבלן",
+      "currentControlDate": "19.3.2022",
+      "controlStatusMMP": "הושלמה",
+      "controlStatusArchive": "טרם הושלמה",
+      "controlOfficer": "מגי בסו",
+      "MMP": "אלכסנדרה דיבקין",
+      "managementCompany": "ספיבק חברה להנדסה בע״מ"
+    }
+  ]
+}

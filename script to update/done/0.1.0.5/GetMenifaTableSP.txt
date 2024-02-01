@@ -1,0 +1,26 @@
+-- values below.
+--
+-- This block of comments will not be included in
+-- the definition of the procedure.
+-- ================================================
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE[dbo].[GetTableName] 
+	@DocType varchar(max),
+	@LevelCode int
+	
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	SELECT TableName as result FROM Classification_BusinessLevels_DocumentsTypes CB
+	WHERE CB.DocType = @DocType AND CB.LevelCode = @LevelCode
+END

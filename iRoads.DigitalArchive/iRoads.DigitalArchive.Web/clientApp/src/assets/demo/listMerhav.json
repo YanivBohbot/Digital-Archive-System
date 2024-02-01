@@ -1,0 +1,24 @@
+{
+  "Merhavlist": [
+    {
+      "Code": 1,
+      "Description": "מרחב צפון"
+    },
+    {
+      "Code": 2,
+      "Description": "מרחב מרכז"
+    },
+    {
+      "Code": 3,
+      "Description": "מרחב דרום"
+    },
+    {
+      "Code": 4,
+      "Description": "מרחב איוש"
+    },
+    {
+      "Code": 5,
+      "Description": "מרחב צפון"
+    }
+  ]
+}

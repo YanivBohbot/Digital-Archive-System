@@ -1,0 +1,170 @@
+.mat-mdc-checkbox.mat-accent .mdc-checkbox--selected ~ .mdc-checkbox__ripple {
+  background: #006699;
+}
+
+.mat-mdc-button .mat-mdc-button-touch-target,
+.mat-mdc-unelevated-button .mat-mdc-button-touch-target,
+.mat-mdc-raised-button .mat-mdc-button-touch-target,
+.mat-mdc-outlined-button .mat-mdc-button-touch-target {
+  height: auto !important;
+}
+
+.mat-mdc-button,
+.mat-mdc-outlined-button {
+  --mat-mdc-button-persistent-ripple-color: transparent;
+  --mat-mdc-button-ripple-color: transparent;
+}
+
+.mat-mdc-button.mat-mdc-button-base,
+.mat-mdc-raised-button.mat-mdc-button-base,
+.mat-mdc-unelevated-button.mat-mdc-button-base,
+.mat-mdc-outlined-button.mat-mdc-button-base {
+  height: 30px;
+}
+
+.mat-mdc-button.mat-unthemed {
+  --mdc-text-button-label-text-color: #ffffff;
+}
+
+.mat-mdc-button:not(:disabled) {
+  color: #ffffff;
+}
+
+.mdc-button {
+  padding: 0px 10px !important;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 0 !important;
+  margin: 0;
+  background-color: unset;
+  transition: all 0.3s ease;
+  border: 0;
+  font-family: "Assistant-Bold", "Assistant Bold", "Assistant", sans-serif !important;
+}
+
+.btn .mdc-button__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.btn .iconStyle {
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn .iconStyle.iconeRigt {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.btn:hover, .btn:focus {
+  opacity: 0.9;
+}
+
+.btn.blue-btn {
+  background-color: #006699;
+  color: #ffffff;
+  height: 30px;
+  padding: 0px 10px;
+}
+
+.btn.blue-btn:disabled {
+  background-color: #d7d7d7;
+  cursor: not-allowed;
+}
+
+.btn.green-btn {
+  background-color: #009962;
+  color: #ffffff;
+  height: 30px;
+  padding: 0px 10px;
+}
+
+.btn.green-btn:disabled {
+  background-color: #d7d7d7;
+  cursor: not-allowed;
+}
+
+.btn.accentColor3-btn {
+  background-color: #7f7f7f;
+}
+
+.btn.transparent {
+  background-color: transparent;
+  padding: 0;
+  color: #006699;
+}
+
+.btn.transparent.mdc-button {
+  padding: 0px !important;
+}
+
+.btn.transparent .mdc-button__label {
+  color: #006699;
+}
+
+.btn.transparent .iconStyle {
+  margin-left: 5px;
+}
+
+.btn.transparent .iconStyle.iconeRigt {
+  margin-left: 0px;
+  margin-right: 5px;
+}
+
+.btn.transparent .DonloadArrowIcon {
+  transition: all 0.3s ease;
+  position: relative;
+  top: 0px;
+}
+
+.btn.transparent:hover .DonloadArrowIcon, .btn.transparent:focus .DonloadArrowIcon {
+  top: 2px;
+}
+
+.btn.border {
+  border: 1px solid #d7d7d7;
+  padding: 0px 10px !important;
+  height: 30px;
+}
+
+.btn.border:hover, .btn.border:focus {
+  background-color: #e9f8ff;
+}
+
+.btn.mr5 {
+  margin-right: 5px;
+}
+
+.btn.mr10 {
+  margin-right: 5px;
+}
+
+.btn.ml8 {
+  margin-left: 8px;
+}
+
+.btn.w50 {
+  width: 48%;
+}
+
+.CloseBtnWrap .CloseBtn {
+  height: auto;
+  min-width: auto;
+  padding: 0 !important;
+}
+
+.back-button {
+  background-color: #f6f6f6;
+}
+
+.back-button.absolute {
+  position: absolute;
+  top: 7px;
+  right: 6px;
+}

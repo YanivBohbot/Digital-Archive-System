@@ -1,0 +1,51 @@
+    {
+
+   
+        "Status": 0,
+        "Messages":["אין שגיאה"],
+    "Data":  [
+        {
+            "DocId": 1,
+            "docId": 23,
+            "LevelCode": 1,
+            "DocumentType":  "תעודת גמר",
+            "URL": "https://www.youtube.com/watch?v=1yzdfQH4hgQ",
+            "AttachedProcess": "ידני",
+            "AttachedDate": "02.03.2022",
+            "AttachedBy":  "יניב",
+            "DocumentName":  "theory og big bang" ,
+            "Discipline": "Discipline",
+            "Element": "Elements1",
+            "DocStatusCode": "תקין",
+            "ReasonRejectCode": "איכות סריקה ירודה",
+            "ControlComments": "אני לא מאשר",
+            "ControlDate": "24.19.2033",
+            "ControlerName": "אשר",
+            "ManhapTreatment": "blabla"
+        },
+        {
+            "DocId": 1,
+            "docId": 23,
+            "LevelCode": 1,
+            "DocumentType":  "תעודת גמר",
+            "URL": "https://www.youtube.com/watch?v=1yzdfQH4hgQ",
+            "AttachedProcess": "ידני",
+            "AttachedDate": "02.03.2022",
+            "AttachedBy":  "יניב",
+            "DocumentName":  "theory og big bang" ,
+            "Discipline": "Discipline",
+            "Element": "Elements1",
+            "DocStatusCode": "תקין",
+            "ReasonRejectCode": "איכות סריקה ירודה",
+            "ControlComments": "אני לא מאשר",
+            "ControlDate": "24.19.2033",
+            "ControlerName": "אשר",
+            "ManhapTreatment": "blabla"
+        }
+
+
+    ]
+
+}
+
+

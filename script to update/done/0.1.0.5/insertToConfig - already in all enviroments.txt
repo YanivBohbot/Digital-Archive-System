@@ -1,0 +1,41 @@
+
+
+INSERT INTO [Site].[Config]
+           ([Id]
+		   ,[Value]
+           ,[Description]
+           ,[App]
+           ,[SortOrder]
+           ,[UpdateDate]
+           ,[IsRowDeleted])
+     VALUES
+           ('ApproveLevelMenifa'
+           ,'SoaArch101_PushShalavStatusMenifa/PushShalavStatusMenifaProxy'
+           ,NULL
+           ,0
+           ,1
+           ,GETDATE()
+           ,0)
+
+
+
+		   INSERT INTO [Site].[Config]
+           ([Id]
+		   ,[Value]
+           ,[Description]
+           ,[App]
+           ,[SortOrder]
+           ,[UpdateDate]
+           ,[IsRowDeleted])
+     VALUES
+           ('ApproveLevelSAP'
+           ,'SoaArch102_PushShalavStatusSAP/PushShalavStatusSAPProxy'
+           ,NULL
+           ,0
+           ,1
+           ,GETDATE()
+           ,0)
+
+
+GO
+

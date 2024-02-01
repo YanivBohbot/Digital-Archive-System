@@ -1,0 +1,65 @@
+{
+
+    "Status": 0,
+    "Messages":["אין שגיאה"],
+    "DocType": "תעggודת גמר" , 
+    "url": "תעודת גמר.doc",
+    "Data":  [
+        {
+            
+            "ProjectDocId": 19,
+            "ChangeReasonCode": 1,
+            "CreateDate": "24.19.2020",          
+            "ControlStatus":  "",
+            "RejectReason": " סיבת דחייה 1",
+            "ControlComments": "אני לא מאשר",
+            "ControlDate": "24.19.2021",
+            "ManhapTreatment": "blabla",
+            "UpdatedBy": " יניב "
+        },
+        {
+            
+            "ProjectDocId": 19,
+            "ChangeReasonCode": 1,
+            "CreateDate": "24.19.2020", 
+            "ControlStatus":  "לא תקין",
+            "RejectReason": " סיבת דחייה 2",
+            "ControlComments": "אני לא מאשר",
+            "ControlDate": "25.12.2021",
+            "ManhapTreatment": "",
+            "UpdatedBy": " ליטל"
+        },
+        {
+            
+            "ProjectDocId": 19,
+            "ChangeReasonCode": 15,
+            "CreateDate": "24.19.2020", 
+            "ControlStatus":  "תקין",
+            "RejectReason": "ת דחייה 3 ",
+            "ControlComments": "אני לא מאשר",
+            "ControlDate": "24.19.2033",
+            "ManhapTreatment": "'סיבה 1",
+            "UpdatedBy": " אשר"
+        }
+
+
+
+    ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

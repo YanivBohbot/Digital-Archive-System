@@ -1,0 +1,36 @@
+<div dir="rtl">
+  <mat-tab-group [ngClass]="" class="tab-group-detailsProject m-start" mat-align-tabs="end" animationDuration="0ms" #MatGroup
+    (selectedIndexChange)="onTabChange($event)">
+    
+    <mat-tab *ngFor="let item of levelsList; let index = index"  class="tab-title">   
+      <ng-template mat-tab-label>
+           <div class="display-flex">
+          <div>
+            <p class="bold">{{ item. Description }}</p>
+            <p [ngClass]="checkStatusDesc(item)">{{ item.BusinessLevelControlStatusDesc ?? "טרם החל השלב"}}</p>
+
+          </div>
+          <div class=" mat-badge-wrap">
+            <mat-badge *ngIf="item?.InvalidDocsCount > 0"  [matBadge]="item?.InvalidDocsCount" matBadgeColor="warn" 
+               ></mat-badge>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template matTabContent>
+        <div *ngIf="true" class="table-inner">
+          <app-level-tab-sub-header 
+          [levelDescription]="item?.LevelDescription"
+          [level]="item"
+          [isContract]="item?.Contracts ? true : false"
+          [contractlist]="item?.Contracts ? item.Contracts : []"
+          (hozei_kablan_clicked)="ContractClicked($event)">
+        </app-level-tab-sub-header>
+        </div>
+        <app-documents-list
+         [contractchange]="this.selectedContract"
+         [level]="item"
+          ></app-documents-list>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

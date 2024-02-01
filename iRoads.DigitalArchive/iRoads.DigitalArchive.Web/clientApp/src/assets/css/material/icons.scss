@@ -1,0 +1,199 @@
+@import "variables";
+
+// example:  <div class="iconStyle WatchIcon"></div>
+
+//general iconStyle
+.iconStyle {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    &.InlineBlock {
+        display: inline-block;
+    }
+
+    &.borderNone {
+        border: 0;
+    }
+
+    &.ml9{
+        margin-left: 9px;
+    }
+}
+//end general iconStyle
+
+.SearchIcon {
+    background-image: url("#{$assetPath}search.png");
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.SearchWhiteIcon {
+    background-image: url("#{$assetPath}search-white.png");
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.WarningMenuIcon {
+    background-image: url("#{$assetPath}warning-menu.png");
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.DonloadArrowIcon, .UploadArrowIcon {
+    background-image: url("#{$assetPath}donload-arrow.png");
+    background-size: 10px;
+    width: 10px;
+    height: 6px;
+}
+
+.DonloadWhiteArrowIcon {
+    background-image: url("#{$assetPath}downloadWhite.svg");
+    background-size: 14px;
+    width: 14px;
+    height: 17px;
+}
+
+.expandLessArrowIcon {
+    background-image: url("#{$assetPath}table-arrow-expand-less.png");
+    background-size: 14px;
+    width:14px;
+    height: 10px;
+}
+
+.expandMoreArrowIcon {
+    background-image: url("#{$assetPath}table-arrow-expand-more.png");
+    background-size: 14px;
+    width: 14px;
+    height: 10px;
+}
+
+.EditPencilBlueIcon {
+  background-image: url("#{$assetPath}edit-blu.png");
+  background-size: 19px;
+  width: 19px;
+  height: 19px;
+  padding: 10px !important;
+}
+
+.StarWhiteIcon {
+    background-image: url("#{$assetPath}star-header.svg");
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.StarGreyIcon {
+    background-image: url("#{$assetPath}star.svg");
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.StarFillIcon {
+    background-image: url("#{$assetPath}star-fill.svg");
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.ExcelIcon {
+    background-image: url("#{$assetPath}excel.png");
+    background-size: 20px;
+    width: 20px;
+    height: 21px;
+}
+
+.DoneIcon {
+    background-image: url("#{$assetPath}done.png");
+    background-size: 20px;
+    width: 20px;
+    height: 19px;
+}
+
+.ArrowBackIcon {
+    background-image: url("#{$assetPath}arrow-back.png");
+    background-size: 7px;
+    width: 7px;
+    height: 13px;
+}
+
+.ArrowLeftIcon {
+    background-image: url("#{$assetPath}arrow-left-blue.png");
+    background-size: 7px;
+    width: 7px;
+    height: 13px;
+}
+
+.SaveBlueIcon {
+    background-image: url("#{$assetPath}save-blue.png");
+    background-size: 17px;
+    width: 17px;
+    height: 17px;
+}
+
+.SaveWhiteIcon {
+    background-image: url("#{$assetPath}save-white.png");
+    background-size: 17px;
+    width: 17px;
+    height: 17px;
+}
+
+.WatchIcon {
+    background-image: url("#{$assetPath}watch.png");
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+}
+
+.WatchGrayIcon {
+    background-image: url("#{$assetPath}watch-gray.png");
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+}
+
+.AddIcon {
+    background-image: url("#{$assetPath}add-icon.png");
+    background-size: 22px;
+    width: 22px;
+    height: 22px;
+}
+
+.AddGrayIcon {
+    background-image: url("#{$assetPath}add-grey-icon.png");
+    background-size: 22px;
+    width: 22px;
+    height: 22px;
+}
+
+.CloseGrayIcon {
+    background-image: url("#{$assetPath}closeGray.png");
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+.CloseWhiteIcon {
+    background-image: url("#{$assetPath}closeWhite.png");
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+.circleBefore {
+    position: relative;
+    &::before {
+        content: "";
+        background-color: $accentColor4;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+}

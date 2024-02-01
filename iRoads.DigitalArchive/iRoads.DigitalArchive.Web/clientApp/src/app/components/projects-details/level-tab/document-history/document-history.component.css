@@ -1,0 +1,5 @@
+@media (max-width: 1024px) {
+  .container_History {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,55 @@
+
+   {
+
+     "Status": 0,
+     "Messages":["אין שגיאה"],
+    "Details":  
+     {   "project_Id": "1",
+          "Name": " כביש 1 - משער הגיא עד הכניסה לירושלים", 
+          "Mnf": 15,
+          "CaseControlStatusCode": 5 , 
+          "ProjectLevels": [
+               {
+                    "LevelCode":  1, 
+                    "Description": "תכנון מוקדם שיפוט 1",
+                    "LevelDate": "12.01.2021"
+               },
+               {
+                    "LevelCode":  2, 
+                    "Description": "תכנון מוקדם שיפוט 2",
+                    "LevelDate": "12.01.2019"
+               },
+               {
+                    "LevelCode":  3, 
+                    "Description": "תכנון מוקדם שיפוט 3d",
+                    "LevelDate": "12.01.2022"
+               }
+              
+          ],
+          "statusBakaraMamap": "תקין", 
+          "dateBakaraMamap" : "12.02.2002",
+          "statusBakaraArchive": 5, 
+          "dateBakaraArchive": "12.02.2032" ,
+          "WbsNum" : "456",
+          "TenderType": "מכרז",
+          "RoadRailNum": 1, 
+          "Interchange": "צומת כנות",
+          "Contracts": "789 , 785",
+          "OperationDepartment": " אגף המבצע",
+          "MainContractor": "יניב,שרה",
+          "ManagementCompany": "חברת ניהול" , 
+          "MamapUserName": "MAMAP",
+          "Manhap": "MANHAP",
+          "ProjectTypes": "סיווג 1 , סיווג 2",
+          "ClassificationCode": 2000,
+          "MerhavAgaf":2,
+          "ControlManager":"yaniv"
+
+     }
+
+ 
+ }
+
+
+
+

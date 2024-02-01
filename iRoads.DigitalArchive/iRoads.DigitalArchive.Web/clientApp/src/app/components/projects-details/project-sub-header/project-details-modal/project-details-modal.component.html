@@ -1,0 +1,72 @@
+<div dir="rtl">
+  <mat-dialog-content class="dialogWrap dialoStyle2">
+    <div class="content_dialog" *ngIf="projectDetails">
+      <div class="dialogHeaderWrap pb10">
+        <h2 class="fz18">{{ projectDetails.detailsProject.Name }}</h2>
+        <div class="CloseBtnWrap">
+          <button mat-button class="CloseBtn" mat-dialog-close>
+            <span class="for-screnReader">סגור</span>
+            <div class="iconStyle CloseGrayIcon"></div>
+          </button>
+        </div>
+      </div>
+      <h3 class="pb22">
+        <span>{{ projectDetails.detailsProject.Mnf }}</span>
+      </h3>
+      <ul class="listStyle lipb10">
+        <li *ngIf="(projectDetails.systemType=== systemType.Default ||  projectDetails.systemType===  systemType.SAP)" class="dirEn">
+          <span>{{ projectDetails.detailsProject.WbsNum }}</span>
+          <span class="bold w150">:WBS</span>
+        </li>
+        <li>
+          <span class="bold w150">כביש:</span>
+          <span>{{ projectDetails.detailsProject.RoadRailNum }}</span>
+        </li>
+        <li *ngIf="(projectDetails.systemType ===  systemType.Default || projectDetails.systemType=== systemType.MNF)">
+          <span class="bold w150">חוזה קבלני:</span>
+          <span>{{ projectDetails.detailsProject.Contracts }}</span>
+        </li>
+        <li>
+          <span class="bold w150">סוג מכרז:</span>
+          <span>{{ projectDetails.detailsProject.TenderType }}</span>
+        </li>
+        <li>
+          <span class="bold w150">אגף מבצע:</span>
+          <span>{{ projectDetails.detailsProject.OperationDepartment }}</span>
+        </li>
+        <li>
+          <span class="bold w150">ממ״פ:</span>
+          <span>{{ projectDetails.detailsProject.MamapFullName }}</span>
+        </li>
+        <li>
+          <span class="bold w150">מנה״פ:</span>
+          <span>{{ projectDetails.detailsProject.ManhapFullName }}</span>
+        </li>
+        <li>
+          <span class="bold w150">קבלן מבצע:</span>
+          <span>{{ projectDetails.detailsProject.MainContractor }}</span>
+        </li>
+        <li>
+          <span class="bold w150">חברת ניהול:</span>
+          <span>{{ projectDetails.detailsProject.ManagementCompany }}</span>
+        </li>
+        <li>
+          <span class="bold w150">אחראי בקרה:</span>
+          <span>{{ projectDetails.detailsProject.ControlManager }}</span>
+        </li>
+        <li>
+          <span class="bold w150">שלב בקרה נוכחי:</span>
+          <span>{{ projectDetails.detailsProject.ProjectLevels[0]?.Description }}</span>
+        </li>
+        <li>
+          <span class="bold w150">תאריך שלב נוכחי:</span>
+          <span>{{ projectDetails.detailsProject.ProjectLevels[0]?.LevelDate| date: 'dd.MM.yyyy'}}</span>
+        </li>
+        <li>
+          <span class="bold w150">סיווג פרויקט:</span>
+          <span>{{ projectDetails.detailsProject.ProjectTypes}}</span>
+        </li>
+      </ul>
+    </div>
+  </mat-dialog-content>
+</div>

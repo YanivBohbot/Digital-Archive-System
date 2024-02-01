@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Castle.Windsor" Version="5.1.2" />
+	  <PackageReference Include="Ness.Framework.BusinessLogic" Version="1.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\iRoads.DigitalArchive.BusinessLogic.Interfaces\iRoads.DigitalArchive.BusinessLogic.Interfaces.csproj" />
+	<ProjectReference Include="..\iRoads.DigitalArchive.BusinessLogic\iRoads.DigitalArchive.BusinessLogic.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.Razor\iRoads.DigitalArchive.Razor.csproj" />
+  </ItemGroup>
+
+  
+
+</Project>

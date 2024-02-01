@@ -1,0 +1,383 @@
+<form class="example-form" [formGroup]="searchForm" dir="rtl">
+  <div class="display-flex display-flex-end generalSpacing PB8">
+    <button class="btn blue-btn" id="basic" type="button" mat-button>
+      <div class="iconStyle WarningMenuIcon"></div> הפק דו"ח בקרה טרם הושלמה
+    </button>
+  </div>
+  <div class="formInnerWrap serchStyle formInnerWrapScroll">
+    <div class="form-row form-row-top">
+      <!--<div class="generalSpacing PL5 PB5 filter-iconWrap">
+    <img class="filter-icon" src="assets/images/filter.png" />
+  </div>-->
+      <div class="fieldWrap w242">
+        <mat-form-field class="" appearance="outline">
+          <div class="iconStyle SearchIcon"></div>
+          <input formControlName="freeSearch" type="search" maxlength="50" matInput>
+        </mat-form-field>
+      </div>
+      <div class="fieldWrap fW2">
+        <span class="label" aria-label="id-form-field">שלב בקרה נוכחי</span>
+        <mat-form-field appearance="outline">
+          <mat-select formControlName="currentControlStep" name="food">
+            <mat-option *ngFor="let value of BusinessLevel" [value]="value.Code"> {{value.Description}} </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="fieldWrap fW2 fWauto">
+        <span class="label" aria-label="id-form-field">תאריך שלב נוכחי</span>
+        <div class="display-flex display-flex-start datepickerWrap">
+          <mat-form-field class="ml5 datepickerWidth" appearance="outline">
+            <input readonly formControlName="startDate" placeholder="מתאריך" (dateChange)="onDateChange()" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="datepickerWidth" appearance="outline">
+            <input readonly matInput formControlName="endDate" placeholder="עד תאריך" [min]="startDate" [matDatepicker]="picker1">
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="fieldWrap fW2">
+        <span class="label" aria-label="id-form-field">סטטוס בקרה ממ"פ</span>
+        <mat-form-field appearance="outline">
+          <mat-select formControlName="controlStatusMMP" name="food">
+            <mat-option *ngFor="let value of PhaseApprovalStatus" [value]="value.Code"> {{value.Description}} </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="fieldWrap fW2">
+        <span class="label" aria-label="id-form-field">סטטוס בקרה ארכיב</span>
+        <mat-form-field appearance="outline">
+          <mat-select formControlName="archiveControlStatus" name="food">
+            <mat-option *ngFor="let value of PhaseApprovalStatus" [value]="value.Code"> {{value.Description}} </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="form-row more-details" *ngIf="showMoreDetails">
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">אחראי בקרה</span>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="controlOfficerControl"
+                 [matAutocomplete]="auto">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of controlOfficerFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="controlOfficerControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="controlOfficerControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field>
+
+      </div>
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">WBS</span>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="WBSControl"
+                 [matAutocomplete]="auto1">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto1="matAutocomplete">
+            <mat-option *ngFor="let option of WBSFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+
+          <button *ngIf="WBSControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="WBSControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+
+        </mat-form-field>
+      </div>
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">מכרז</span>
+
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="tendersControl"
+                 [matAutocomplete]="auto2">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto2="matAutocomplete">
+            <mat-option *ngFor="let option of tendersFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="tendersControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="tendersControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">כביש</span>
+
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="roadControl"
+                 [matAutocomplete]="auto3">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto3="matAutocomplete">
+            <mat-option *ngFor="let option of roadFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="roadControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="roadControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">צומת/מחלף</span>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="junctionOrInterchangeControl"
+                 [matAutocomplete]="auto4">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto4="matAutocomplete">
+            <mat-option *ngFor="let option of junctionOrInterchangeFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="junctionOrInterchangeControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="junctionOrInterchangeControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">חוזה קבלן</span>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="contractsControl"
+                 [matAutocomplete]="auto5">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto5="matAutocomplete">
+            <mat-option *ngFor="let option of contractsFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="contractsControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="contractsControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field>
+
+      </div>
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">אגף מבצע </span>
+
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="operationsDivisionControl"
+                 [matAutocomplete]="auto6">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto6="matAutocomplete">
+            <mat-option *ngFor="let option of operationsDivisionFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="operationsDivisionControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="operationsDivisionControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field>
+
+      </div>
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">קבלן מבצע </span>
+
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="constructorDivisionControl"
+                 [matAutocomplete]="auto7">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto7="matAutocomplete">
+            <mat-option *ngFor="let option of constructorFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="constructorDivisionControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="constructorDivisionControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">חברת ניהול</span>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="managementCompanyControl"
+                 [matAutocomplete]="auto8">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto8="matAutocomplete">
+            <mat-option *ngFor="let option of managementCompanyFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="managementCompanyControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="managementCompanyControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">ממ"פ</span>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="MMPControl"
+                 [matAutocomplete]="auto9">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto9="matAutocomplete">
+            <mat-option *ngFor="let option of MMPFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="MMPControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="MMPControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="fieldWrap">
+        <span class="label" aria-label="id-form-field">מנה"פ</span>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input type="text"
+                 placeholder="בחר"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="MNHPControl"
+                 [matAutocomplete]="auto10">
+          <i class="material-icons align-arrow-right">arrow_drop_down</i>
+
+          <mat-autocomplete #auto10="matAutocomplete">
+            <mat-option *ngFor="let option of MNHPFilteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="MNHPControl.value"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  aria-label="Clear"
+                  (click)="MNHPControl.reset(); $event.stopPropagation()">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="display-flex display-flex-end">
+      <button (click)="showMoreDetails=!showMoreDetails" class="btn transparent additional-filters" id="basic"
+              type="button" mat-button>
+        סינונים נוספים <div class="iconStyle iconeRigt" [ngClass]="showMoreDetails?  'UploadArrowIcon': 'DonloadArrowIcon' "></div>
+      </button>
+    </div>
+
+    <div class="btnDiv">
+      <button class="btn green-btn" id="basic" type="button" (click)="searchByFilters($event)" mat-button>
+        <div class="iconStyle SearchWhiteIcon"></div> חפש
+      </button>
+      <button class="btn blue-btn" id="basic" type="button" (click)="clearSearch()" mat-button>
+        <div class="iconStyle "></div> נקה
+      </button>
+    </div>
+  </div>
+</form>

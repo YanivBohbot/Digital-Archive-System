@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+	  <PackageReference Include="FluentNHibernate" Version="3.1.0" />
+	  <PackageReference Include="Ness.Framework.Core" Version="1.2.3" />
+	  <PackageReference Include="Ness.Framework.Entities" Version="1.0.7" />
+	  <PackageReference Include="NHibernate" Version="5.4.1" />
+  </ItemGroup>
+  
+
+</Project>

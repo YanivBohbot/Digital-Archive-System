@@ -1,0 +1,21 @@
+.update-status-wrap {
+  margin-right: 25px;
+  border-right: 1px solid #dddddd;
+  padding: 20px 20px 20px 20px;
+  height: 100%;
+  min-width: 400px;
+}
+
+@media (max-width: 1360px) {
+  .update-status-wrap {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .update-status-wrap {
+    border-right: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+}

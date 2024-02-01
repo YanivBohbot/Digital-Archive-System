@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="5.1.2" />
+    <PackageReference Include="Castle.Windsor.MsDependencyInjection" Version="3.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Ness.Framework.Logger" Version="1.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\iRoads.DigitalArchive\iRoads.DigitalArchive.BusinessLogic.Interfaces\iRoads.DigitalArchive.BusinessLogic.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

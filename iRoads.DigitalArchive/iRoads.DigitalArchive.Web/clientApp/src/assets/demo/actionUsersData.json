@@ -1,0 +1,40 @@
+
+{
+    "Status": 0,
+    "Messages":["אין שגיאה"],
+    "Details":{
+        "AllowActions":[
+            {
+                "Code":4,
+                "description":"כתיבת העורות"
+            },
+            {
+            "Code":2,
+            "description":"אישור בקרת ארכיב לשלב"
+            },
+           {
+           
+           "Code":1,
+           "description":"אישור בקרת ארכיב לתיק"
+           },
+           {
+            "Code":5,
+            "description":" בחירה מרחב / אגף ייעודי מתוך רשימה"
+    
+           } ,
+           {
+            "Code":7,
+            "description":"הפקת קובץ אקסל"
+    
+           } 
+           
+        ]
+    
+    }
+
+
+}
+
+
+
+

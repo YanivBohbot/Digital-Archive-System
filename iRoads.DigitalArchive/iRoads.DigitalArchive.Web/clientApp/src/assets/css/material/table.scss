@@ -1,0 +1,203 @@
+@import "variables";
+
+.table-header.display-flex {
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 8px;
+
+    @media (max-width: 1060px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .DonloadToXl {
+        @media (max-width: 1060px) {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    }
+}
+
+.mat-mdc-table {
+    border: 1px solid $tableBorder !important;
+    border: 1px solid $tableBorder !important;
+    border-bottom: 0px !important;
+        .mat-mdc-header-row,
+        .mdc-data-table__header-row {
+            height: 46px;
+
+            @media screen and (max-width: 940px) {
+                height: auto;
+            }
+            .mdc-data-table__header-cell {
+                background-color: $accentColor1;
+                color: $textColor2;
+                border-left: 1px solid $bgColor2;
+                font-weight: 700;
+
+                &:last-child {
+                    border-left: 0;
+                }
+
+                .mat-sort-header-container {
+                    .mat-sort-header-arrow {
+                        transform: translateY(25%) !important;
+                        opacity: 1 !important;
+                        color: transparent;
+                        background-image: url("#{$assetPath}donload-arrow-white.svg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 10px;
+                        background-color: transparent;
+                        margin: 0 6px 6px 0;
+                    }
+                }
+            }
+    }
+
+        .mat-mdc-row,
+        .mdc-data-table__row {
+            height: 46px;
+            background-color: $bgColor2;
+            @media screen and (max-width: 940px) {
+                height: auto;
+            }
+            &:nth-of-type(odd) {
+                background-color: $tableBG;
+
+                @media screen and (max-width: 940px) {
+                    background-color: $bgColor2;
+                    height: auto;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $tableHoverBG;
+            }
+
+            .mdc-data-table__cell {
+                border-left: 1px solid $tableBorder;
+                border-bottom: 1px solid $tableBorder;
+                font-weight: 500;
+            }
+    }
+
+        .mat-mdc-header-row,
+        .mat-mdc-row {
+            .mdc-data-table__header-cell,
+            .mdc-data-table__cell {
+                text-align: right;
+                padding: 5px 7px 5px 7px;
+                font-size: 16px;
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width: 940px) {
+                    font-size: 16px;
+                }
+
+                &.accentColor1 {
+                    color: $accentColor1;
+                }
+                &.status-success {
+                    color: $statusSuccess;
+                }
+                &.status-failed {
+                    color: $statusFailed;
+                }
+                &.status-before {
+                    color: $statusBefore;
+                }
+
+                &.center {
+                    text-align: center;
+                    @media screen and (max-width: 940px) {
+                        text-align: right;
+                    }
+                    .cellInner {
+                        justify-content: center;
+                        @media screen and (max-width: 940px) {
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+
+                .cellInner {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 100%;
+                    height: 100%;
+
+                    &.space-between {
+                        justify-content: space-between;
+                    }
+
+                    @media screen and (max-width: 940px) {
+                        display: unset;
+                    }
+
+                    .EditPencilBlueIcon {
+                        @media screen and (max-width: 940px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+}
+
+@media screen and (max-width: 940px) {
+    .mat-mdc-table {
+        width: 100%;
+        mat-header-row {
+            display: none;
+        }
+    }
+    .mat-mdc-table .mat-mdc-row {
+        border-bottom: 1px solid #afb7bb;
+        display: block;
+        height: auto;
+
+        &:last-of-type {
+            border-bottom: 0px solid #afb7bb;
+            mat-cell {
+                &:last-of-type {
+                    border-radius: 0px 0px 20px 20px;
+                }
+            }
+        }
+    }
+
+    .mat-mdc-table .mat-mdc-cell {
+        display: block;
+        border-bottom: 0px;
+
+        .iconStyle {
+            display: inline-block;
+            position: relative;
+            bottom: -5px;
+        }
+    }
+    .mat-mdc-table .mat-mdc-cell:before {
+        content: attr(data-label) ": ";
+        display: inline-block;
+        font-weight: 700;
+        padding-left: 5px;
+        color: #000;
+    }
+
+    .MobNoFirstTh {
+        &.mat-mdc-table .mat-mdc-cell:first-child {
+            background-color: $tableBG;
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,5 @@
+
+<div class="main-project-list">
+    <app-project-list-header (clearEventParent) = "clearEventIsClicked()" (searchEventParent) = "searchEventIsClicked($event)"></app-project-list-header>
+    <app-projects-table [searchEventInChild] = "notify" [clearEventInChild] = "clearNotify" ></app-projects-table>
+</div>

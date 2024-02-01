@@ -1,0 +1,134 @@
+.formInnerWrap {
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-row .label {
+  margin-left: 5px;
+  color: #333333;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.form-row button {
+  margin-bottom: 10px;
+}
+
+.form-row mat-form-field.mat-mdc-form-field {
+  padding-bottom: 10px;
+}
+
+mat-form-field.mat-mdc-form-field {
+  position: relative;
+}
+
+mat-form-field.mat-mdc-form-field.w103 {
+  width: 103px;
+}
+
+mat-form-field.mat-mdc-form-field.w147 {
+  width: 147px;
+}
+
+mat-form-field.mat-mdc-form-field.ml16 {
+  margin-left: 16px;
+}
+
+mat-form-field.mat-mdc-form-field.ml20 {
+  margin-left: 20px;
+}
+
+mat-form-field.mat-mdc-form-field.ml5 {
+  margin-left: 5px;
+}
+
+mat-form-field.mat-mdc-form-field .searchIcon {
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+mat-form-field.mat-mdc-form-field .mat-mdc-text-field-wrapper {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+mat-form-field.mat-mdc-form-field .mat-mdc-form-field-subscript-wrapper {
+  height: 0;
+}
+
+mat-form-field.mat-mdc-form-field .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-width: 0;
+  width: 100%;
+  min-height: auto;
+}
+
+mat-form-field.mat-mdc-form-field .mdc-text-field--outlined {
+  height: 30px;
+  overflow: visible;
+}
+
+mat-form-field.mat-mdc-form-field .mdc-notched-outline__leading,
+mat-form-field.mat-mdc-form-field .mdc-notched-outline__notch,
+mat-form-field.mat-mdc-form-field .mdc-notched-outline__trailing {
+  border-radius: 0 !important;
+  border-color: #dddddd !important;
+}
+
+mat-form-field.mat-mdc-form-field .mdc-floating-label {
+  top: 13px !important;
+  right: 0px !important;
+}
+
+mat-form-field.mat-mdc-form-field .mat-datepicker-toggle {
+  color: transparent;
+}
+
+mat-form-field.mat-mdc-form-field .mat-datepicker-toggle .mat-mdc-icon-button.mat-mdc-button-base {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin-bottom: 0;
+  background-image: url("~src/assets/images/calendar.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 16px;
+  border-radius: 0;
+}
+
+mat-form-field.mat-mdc-form-field .mat-datepicker-toggle .mat-mdc-icon-button.mat-mdc-button-base .mat-mdc-button-touch-target {
+  width: 25px;
+  height: 25px;
+}
+
+mat-form-field.mat-mdc-form-field .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+.mdc-notched-outline--upgraded
+.mdc-floating-label--float-above {
+  --mat-mdc-form-field-label-transform: translateY(-22.75px) scale(var(--mat-mdc-form-field-floating-label-scale, 0.75));
+  transform: var(--mat-mdc-form-field-label-transform);
+}
+
+mat-form-field.mat-mdc-form-field .mat-mdc-select-arrow {
+  width: 10px;
+  height: 11px;
+  position: relative;
+  background-image: url("~src/assets/images/select.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 9px;
+}
+
+mat-form-field.mat-mdc-form-field .mat-mdc-select-arrow svg {
+  display: none;
+}

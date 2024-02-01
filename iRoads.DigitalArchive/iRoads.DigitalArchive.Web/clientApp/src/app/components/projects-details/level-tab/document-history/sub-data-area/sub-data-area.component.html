@@ -1,0 +1,175 @@
+<div class="update-status-wrap">
+  <div dir="rtl" *ngIf="isArchiv; else isManap">
+    <div class="update_status_container">
+      <h2 class="fz24 pt7 pb20">עדכון סטטוס בקרה</h2>
+      <div class="updateform">
+        <form
+          dir="rtl"
+          [formGroup]="updateStatusForm"
+          #formDirective="ngForm"
+          (ngSubmit)="onFormSubmit(updateStatusForm, formDirective)"
+        >
+          <div class="fieldWrap fieldWrapColumn">
+            <span class="label" aria-label="id-form-field">
+              <span class="requiredStyle">*</span>סטטוס בקרה</span
+            >
+            <mat-form-field appearance="outline" class="w100 mb20">
+              <mat-select
+                formControlName="statusBakaraListController"
+                id="statusbakaraList"
+                name="statusbakara"
+                [(ngModel)]="statusCodeSelected"
+                (ngModelChange)="statusCodeChange($event)"
+                class="select_statusbakara"
+              > 
+                <mat-option
+                  *ngFor="let option of lookupservice.statusBakaraList"
+                  [value]="option.Code"
+                >
+                  {{ option.Description }}
+                </mat-option>
+              </mat-select>
+              <mat-error
+                *ngIf="
+                  updateStatusForm.controls['statusBakaraListController'].hasError(
+                    'required'
+                  )
+                "
+                >יש לבחור סטטוס.</mat-error
+              >
+            </mat-form-field>
+          </div>
+          <div
+            *ngIf="flagrRejectReasonField"
+            class="rejection_reasons_form fieldWrap fieldWrapColumn"
+          >
+            <span class="label" aria-label="id-form-field">
+              <span class="requiredStyle">*</span>סיבת דחייה</span
+            >
+            <mat-form-field appearance="outline" class="w100 mb20">
+              <mat-select
+                formControlName="rejectionReasonsListController"
+                id="rejection_reasons"
+                name="rejection_reasons"
+                [(ngModel)]="rejectionReasonsSelected"
+              >
+                <mat-option
+                  *ngFor="let item of lookupservice.rejectionReasonsList"
+                  [value]="item.Code"
+                >
+                  {{ item.Description }}
+                </mat-option>
+              </mat-select>
+              <mat-error
+                *ngIf="
+                  updateStatusForm.controls[
+                    'rejectionReasonsListController'
+                  ].hasError('required')
+                "
+                >חובה לבחור סיבת דחיה.</mat-error
+              >
+            </mat-form-field>
+          </div>
+          <div
+            *ngIf="showCommentsField"
+            class="area_comments_form fieldWrap fieldWrapColumn"
+          >
+            <span class="label" aria-label="id-form-field">הערות</span>
+            <mat-form-field appearance="outline" class="w100 h92 mb20">
+              <textarea
+                placeholder="הערות..."
+                formControlName="commentsController"
+                class="area_comments_status"
+                maxlength="200"
+                matInput
+              ></textarea>
+              <mat-error
+                *ngIf="
+                  updateStatusForm.controls['commentsController'].hasError(
+                    'required'
+                  )
+                "
+                >יש לכתוב הערות.</mat-error
+              >
+            </mat-form-field>
+          </div>
+          <div class="buttons_updatestatus generalSpacing PT20">
+            <button
+              mat-button
+              type="button"
+              class="button_cancelStatusBakara btn accentColor3-btn w50 ml8"
+              (click)="resetForm()"
+            >
+              <div class="iconStyle CloseWhiteIcon"></div>
+              בטל
+            </button>
+            <button
+              mat-button
+              [disabled]="updateStatusForm.invalid"
+              class="button_saveStatusBakara btn blue-btn w50"
+              type="submit"
+            >
+              <div class="iconStyle SaveWhiteIcon"></div>
+              שמור
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <ng-template #isManap>
+    <h2 class="fz24 pt7 pb20">הוסף התייחסות מנה״פ</h2>
+    <form
+      dir="rtl"
+      [formGroup]="manapCommentsForm"
+      #formDirective="ngForm"
+      (ngSubmit)="onManapCommentsSubmit(formDirective)"
+    >
+      <div class="fieldWrap fieldWrapColumn">
+        <span class="label" aria-label="id-form-field">
+          <span class="requiredStyle">*</span>התייחסות מנה״פ</span
+        >
+        <mat-form-field appearance="outline" class="w100 h92">
+          <textarea
+           [readonly]="readonly"
+            placeholder="הערות...."
+            matInput
+            formControlName="CommentsController"
+            maxlength="200"
+          >
+          </textarea>
+          <mat-error
+          *ngIf="
+          manapCommentsForm.controls['CommentsController'].hasError(
+              'required'
+            )
+          "
+          >יש לכתוב הערות.</mat-error
+        >
+        </mat-form-field>
+      </div>
+      <div class="generalSpacing PT20">
+        <button
+          mat-button
+          type="button"
+          class="button_cancelStatusBakara btn accentColor3-btn w50 ml8"
+          (click)="resetManapForm()"
+          >
+          <div class="iconStyle CloseWhiteIcon"></div>
+          בטל
+        </button>
+        <button
+          mat-button
+          [disabled]="!manapCommentsForm.valid || disabled "
+          class="button_saveComment btn blue-btn w50"
+          type="submit"
+        >
+          <div class="iconStyle SaveWhiteIcon"></div>
+          שמור
+        </button>
+      </div>
+    </form>
+  </ng-template>
+</div>
+
+

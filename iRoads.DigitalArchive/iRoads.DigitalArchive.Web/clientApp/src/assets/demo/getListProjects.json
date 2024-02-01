@@ -1,0 +1,67 @@
+{
+  "Status": 0,
+  "Messages": ["אין שגיאה"],
+  "Details": [
+    {
+      "Id": "1",
+      "Name": " כביש 1 - משער הגיא עד הכניסה לירושלים",
+      "Mnf": 15,
+      "ProjectLevels": [
+        {
+          "LevelCode": 1,
+          "Description": "תכנון מוקדם שיפוט 1",
+          "LevelDate": "12.01.2021"
+        }
+      ],
+      "statusBakaraMamap": "תקין",
+      "statusBakaraArchive": 5,
+      "ControlManager": "yaniv",
+      "Contract": "789000000",
+      "ManagementCompany": "חברת ניהול",
+      "Mamap": "MAMAP",
+      "FavoriteProject": true,
+      "projectArchive": false
+    },
+
+    {
+      "Id": "2",
+      "Name": " כביש 1 - משער הגיא עד הכניסה לירושלים",
+      "Mnf": 15,
+      "ProjectLevels": [
+        {
+          "LevelCode": 1,
+          "Description": "תכנון מוקדם שיפוט 1",
+          "LevelDate": "12.01.2021"
+        }
+      ],
+      "statusBakaraMamap": "תקין",
+      "statusBakaraArchive": 5,
+      "ControlManager": "yaniv",
+      "Contract": "789000000",
+      "ManagementCompany": "חברת ניהול",
+      "Mamap": "MAMAP",
+      "FavoriteProject": true,
+      "projectArchive": false
+    },
+    {
+      "Id": "3",
+      "Name": " כביש 2 -   תל אביב ",
+      "Mnf": 58,
+      "ProjectLevels": [
+        {
+          "LevelCode": 1,
+          "Description": "תכנון מוקדם שיפוט 1",
+          "LevelDate": "12.01.2023"
+        }
+      ],
+      "statusBakaraMamap": "תקין",
+      "statusBakaraArchive": 5,
+      "ControlManager": "yaniv",
+      "Contract": "789000000",
+      "ManagementCompany": "חברת ניהול",
+      "Mamap": "MAMAP",
+      "FavoriteProject": false,
+      "projectArchive": false
+    }
+  ]
+}

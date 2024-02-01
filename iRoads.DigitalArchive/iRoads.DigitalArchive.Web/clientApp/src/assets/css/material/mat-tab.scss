@@ -1,0 +1,79 @@
+@import "variables";
+mat-tab-group {
+    border: 1px solid $formElementBorderColor;
+    mat-tab-header {
+        .mdc-tab {
+            border-left: 2px solid $formElementBorderColor;
+            border-bottom: 1px solid $formElementBorderColor;
+            height: auto !important;
+            background-color: $bgColor3;
+            padding: 7px 10px 10px 10px;
+
+            @media (max-width: 800px) {
+                padding: 5px;
+            }
+
+            &:last-child {
+                border-left: 0px;
+            }
+        }
+        .mdc-tab-indicator__content--underline {
+            border-top-style: unset;
+        }
+        .mdc-tab--active {
+            border-top: 4px solid $accentColor1 !important;
+            background-color: $bgColor2;
+            border: 0;
+            position: relative;
+        }
+        .mdc-tab__content {
+            align-items: stretch;
+            .mdc-tab__text-label {
+                flex-direction: column;
+                justify-content: space-between;
+                color: $textColor1 !important;
+                p {
+                    font-size: 16px;
+                    font-weight: 500;
+                    &.fz13 {
+                        font-size: 13px;
+                        padding: 3px 0px;
+                    }
+
+                    &.bold {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    .mat-mdc-tab-body-wrapper {
+        background-color: $bgColor2;
+        padding: 20px 30px;
+        height: auto;
+        @media (max-width: 900px) {
+            padding: 10px 10px;
+        }
+    }
+}
+.mat-badge-wrap{
+    position: relative;
+    top: -5px;
+
+    mat-badge{      
+    &.mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+            top: unset;
+            position: unset;
+            right: unset;
+            left: unset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;           
+            margin-right: 10px;
+            background: #d9001d;
+        }
+    }
+    
+}

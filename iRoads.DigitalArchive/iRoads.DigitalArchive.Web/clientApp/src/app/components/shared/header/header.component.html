@@ -1,0 +1,19 @@
+<div class="mainHeader"  *ngIf="projectInfoSvc.systemType === system.Default">
+    <div class="display-flex headerbox">
+        <div class="headerImgWrap">
+            <img class="headerImg" src="../../../../assets/images/logo.png" alt="נתיבי ישראל" />
+        </div>
+        <div class="systemTitle">
+            <h1>{{systemeName}} </h1>
+        </div>
+        <div class="usernameHeader"> שלום {{sharedUserSvc.getUser()?.DisplayName}} </div>
+    </div>
+    <div class="systemTitleForMob">
+        <h1>{{systemeName}} </h1>
+    </div>
+    <div class="ScreenNameWrap">
+        <div class="display-flex display-flex-center backgroundheaderScreenNameProject">
+            <h2 class="screenNameProject"> {{screenName}} </h2>
+        </div>
+    </div>
+</div>

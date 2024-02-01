@@ -1,0 +1,60 @@
+.mat-mdc-checkbox.mat-accent .mdc-checkbox--selected ~ .mdc-checkbox__ripple {
+  background: #006699;
+}
+
+mat-tab-group {
+  border: 1px solid #dddddd;
+}
+mat-tab-group mat-tab-header .mdc-tab {
+  border-left: 2px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  height: auto !important;
+  background-color: #efefef;
+  padding: 7px 10px 10px 10px;
+}
+@media (max-width: 800px) {
+  mat-tab-group mat-tab-header .mdc-tab {
+    padding: 5px;
+  }
+}
+mat-tab-group mat-tab-header .mdc-tab:last-child {
+  border-left: 0px;
+}
+mat-tab-group mat-tab-header .mdc-tab-indicator__content--underline {
+  border-top-style: unset;
+}
+mat-tab-group mat-tab-header .mdc-tab--active {
+  border-top: 4px solid #006699 !important;
+  background-color: #ffffff;
+  border: 0;
+  position: relative;
+}
+mat-tab-group mat-tab-header .mdc-tab__content {
+  align-items: stretch;
+}
+mat-tab-group mat-tab-header .mdc-tab__content .mdc-tab__text-label {
+  flex-direction: column;
+  justify-content: space-between;
+  color: #333333 !important;
+}
+mat-tab-group mat-tab-header .mdc-tab__content .mdc-tab__text-label p {
+  font-size: 16px;
+  font-weight: 500;
+}
+mat-tab-group mat-tab-header .mdc-tab__content .mdc-tab__text-label p.fz13 {
+  font-size: 13px;
+  padding: 3px 0px;
+}
+mat-tab-group mat-tab-header .mdc-tab__content .mdc-tab__text-label p.bold {
+  font-weight: 700;
+}
+mat-tab-group .mat-mdc-tab-body-wrapper {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  height: auto;
+}
+@media (max-width: 900px) {
+  mat-tab-group .mat-mdc-tab-body-wrapper {
+    padding: 10px 10px;
+  }
+}

@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+       <PreserveCompilationContext>true</PreserveCompilationContext>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_WebToolingArtifacts Remove="Properties\launchSettings.json" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Content Include="Properties\launchSettings.json" />
+    </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AspNetCore.Http.Extensions" Version="1.0.1" />
+        <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+        <PackageReference Include="Castle.Windsor.MsDependencyInjection" Version="3.4.0" />
+        <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.9" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.14" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Cors" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.13" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.27.0" />
+        <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
+        <PackageReference Include="Ness.Framework.Core.WebApi" Version="1.0.9" />
+        <PackageReference Include="Ness.Framework.Logger" Version="1.0.6" />
+        <PackageReference Include="Ness.Framework.Razor" Version="1.0.8" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+        <PackageReference Include="System.DirectoryServices.AccountManagement" Version="7.0.0" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
+    </ItemGroup>
+
+  
+
+  <ItemGroup>
+    <ProjectReference Include="..\iRoads.DigitalArchive.BusinessLogic.Bootstrapper\iRoads.DigitalArchive.BusinessLogic.Bootstrapper.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.BusinessLogic.Interfaces\iRoads.DigitalArchive.BusinessLogic.Interfaces.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.BusinessLogic\iRoads.DigitalArchive.BusinessLogic.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.DataAccess.Networking\iRoads.DigitalArchive.DataAccess.Networking.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.Entities\iRoads.DigitalArchive.Entities.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.Mapper\iRoads.DigitalArchive.Mapper.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.Models\iRoads.DigitalArchive.Models.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.Razor\iRoads.DigitalArchive.Razor.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.Services.Bootstrapper\iRoads.DigitalArchive.Services.Bootstrapper.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.Services.Interfaces\iRoads.DigitalArchive.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\iRoads.DigitalArchive.Services\iRoads.DigitalArchive.Services.csproj" />
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
+    <None Update="templates\AlertAllUsersFinishedProjects.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\AlertMamapFinishedProjects.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\MamapReport.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\export_project_list.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\AlertManhap.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\AlertManhapFinishedProjects.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="::npm run publish --prefix clientApp" />
+  </Target>
+
+</Project>

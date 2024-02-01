@@ -1,0 +1,114 @@
+<div>
+  <div class="display-flex table-header">
+    <!--<div>
+      <h2 class="fz16">מציג {{pageSize}} תיקי פרויקט</h2>
+    </div>-->
+    <div class="display-flex">
+      <div class="checkboxRow ml30">
+        <mat-checkbox class="example-margin" ngDefaultControl [(ngModel)]="onlyFavorite">
+          הצג רק פרוייקטים
+          מועדפים
+        </mat-checkbox>
+        <mat-checkbox class="example-margin" ngDefaultControl [(ngModel)]="onlyMNHP">
+          הצג רק פרויקטים עם התייחסויות
+          מנה״פ
+        </mat-checkbox>
+        <mat-checkbox class="example-margin" ngDefaultControl [(ngModel)]="onlyInvalidDocument">
+          הצג רק פרויקטים עם
+          מסמכים לא תקינים
+        </mat-checkbox>
+      </div>
+      <button class="btn blue-btn DonloadToXl" id="basic" type="button" (click)="onExcelClicked($event)" mat-button>
+        <div class="iconStyle DonloadWhiteArrowIcon"></div> יצא לאקסל
+      </button>
+    </div>
+  </div>
+  <!-- [dataSource]="dataSource" -->
+  <table mat-table matSort [dataSource]="sortedData" (matSortChange)="sortData($event)" class="mat-table MobNoFirstTh">
+    <ng-container matColumnDef="star">
+      <th mat-header-cell *matHeaderCellDef class="center">
+        <div class="cellInner">
+          <div class="iconStyle StarWhiteIcon"></div>
+        </div>
+      </th>
+      <td mat-cell *matCellDef="let element" class="center" (click)="changeFavorite(element)">
+        <div class="cellInner ">
+          <div *ngIf="!element.IsFavorite" class="iconStyle StarGreyIcon"></div>
+          <div *ngIf="element.IsFavorite" class="iconStyle StarFillIcon"></div>
+        </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="projectNum">
+      <th mat-header-cell *matHeaderCellDef> מס' פרוייקט</th>
+      <td data-label="מס' פרוייקט" class="accentColor1" mat-cell *matCellDef="let element">
+        <div class="cellInner" style="cursor: pointer">
+          <a class="nav-link mt-1" (click)="navigateToProjectDetailsPage(element)"><i class="fa fa-sign-in"></i> {{ element.MNF }}</a>
+         
+        </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="projectDesc">
+      <th mat-header-cell *matHeaderCellDef>תיאור פרויקט</th>
+      <td data-label="תיאור פרויקט" mat-cell *matCellDef="let element">
+        <div class="cellInner"> {{ element.Description }}</div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="contractualContract">
+      <th mat-header-cell *matHeaderCellDef >חוזה קבלני</th>
+      <td data-label="חוזה קבלני" mat-cell *matCellDef="let element">
+        <div class="cellInner"> {{ element.Contracts }}</div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="currentControlStage">
+      <th mat-header-cell *matHeaderCellDef> שלב נוכחי</th>
+      <td data-label="תאריך שלב נוכחי" mat-cell *matCellDef="let element">
+        <div class="cellInner"> {{ element.CurrentLevelDesc }}</div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="currentControlDate">
+      <th mat-header-cell *matHeaderCellDef>תאריך שלב נוכחי</th>
+      <td data-label="תאריך שלב נוכחי" mat-cell *matCellDef="let element">
+        <div class="cellInner"> {{ element.CurrentLevelDate | date: 'dd/MM/yyyy'}}</div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="controlStatusMMP">
+      <th mat-header-cell *matHeaderCellDef>סטטוס בקרה ממ"פ</th>
+      <td data-label='סטטוס בקרה ממ"פ' [ngClass]="checkStatusControlMMP(element)" mat-cell *matCellDef="let element">
+        <div class="cellInner"> {{ element.MamapStatusDesc ?? 'טרם החל השלב' }} </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="controlStatusArchive">
+      <th mat-header-cell *matHeaderCellDef>סטטוס בקרה ארכיב</th>
+      <td data-label="סטטוס בקרה ארכיב" [ngClass]="checkStatusControlArch(element)" mat-cell *matCellDef="let element">
+        <div class="cellInner"> {{ element.ArchivStatusDesc  ?? 'טרם החל השלב' }}</div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="controlOfficer">
+      <th mat-header-cell *matHeaderCellDef>אחראי בקרה</th>
+      <td data-label="אחראי בקרה" class="accentColor1"  [ngClass]="{'CursorPointer':displayEditControl} " mat-cell *matCellDef="let element"
+          (click)="openDialog(element)">
+        <div *ngIf="displayEditControl" class="cellInner space-between">
+          {{ element.ControlManager }} <div class="iconStyle EditPencilBlueIcon">
+          </div>
+        </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="MMP">
+      <th mat-header-cell *matHeaderCellDef>ממ"פ</th>
+      <td data-label='ממ"פ' mat-cell *matCellDef="let element">
+        <div class="cellInner">{{ element.Mamap }} </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="managementCompany">
+      <th mat-header-cell *matHeaderCellDef>חברת ניהול</th>
+      <td data-label="חברת ניהול" mat-cell *matCellDef="let element">
+        <div class="cellInner">{{element.Company}}</div>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsNames"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnsNames"></tr>
+  </table>
+  <mat-paginator dir="rtl" #paginator [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true" [length]="totalSize"
+                 [pageIndex]="pageNumber" (page)="handlePage($event)">
+  </mat-paginator>
+</div>

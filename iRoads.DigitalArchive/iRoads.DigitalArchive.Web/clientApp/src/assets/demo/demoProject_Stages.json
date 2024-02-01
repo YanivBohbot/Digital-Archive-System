@@ -1,0 +1,215 @@
+
+
+
+   {
+
+         "Status": 0,
+         "Messages":["אין שגיאה"],
+         "Data": [
+            {
+               "ProjectId": "1",
+               "LevelCode": 1,
+               "Description": "תכנון ראשוני שיפוט 1",
+               "StartBusinessLevelDate": "12.02.2013",
+               "BusinessLevelControlStatusCode": 1,
+               "BusinessLevelControlStatusDesc":"בקרה הושלמה",
+               "UserNameArchiv": "אשר", 
+               "PhaseApprovalArcCode": 1,
+               "PhaseApprovalArcDesc": "הושלמה",
+               "PashApprovalArcDate":  "20.03.200", 
+               "UserNameMamap":  "יניב",
+               "PhaseApprovalMamapCode": 1,
+               "PhaseApprovalMamapDesc": "הושלמה", 
+               "PashApprovalMamapDate":   "20.02.2023" , 
+               "BusinessLevelStatusDate": "20.12.2024",
+               "InvalidDocsCount":  2,
+               "Contracts" : []
+              },
+              {
+               "ProjectId": "1",
+               "LevelCode": 2,
+               "Description": "תכנון מוקדם שיפוט 2",
+               "StartBusinessLevelDate": "12.02.2013",
+               "BusinessLevelControlStatusCode": 2,
+               "BusinessLevelControlStatusDesc": "בקרה טרם הושלמה",
+               "UserNameArchiv": "אשר", 
+               "PhaseApprovalArcCode": 2,
+               "PhaseApprovalArcDesc": "טרם הושלמה",
+               "PashApprovalArcDate":  "20.03.200", 
+               "UserNameMamap":  "יניב",
+               "PhaseApprovalMamapCode": 2, 
+               "PhaseApprovalMamapDesc":"טרם הושלמה",
+               "PashApprovalMamapDate":   "20.02.2023" , 
+               "BusinessLevelStatusDate": "20.12.2024",
+               "InvalidDocsCount":  2,
+               "Contracts" : []
+              },
+              {
+               "ProjectId": "1",
+               "LevelCode": 3,
+               "Description": "תכנון מפורט שיפוט 3",
+               "StartBusinessLevelDate": "12.02.2013",
+               "BusinessLevelControlStatusCode": 2,
+               "BusinessLevelControlStatusDesc": "בקרה טרם הושלמה",
+               "UserNameArchiv": "אשר", 
+               "PhaseApprovalArcCode": 1,
+               "PhaseApprovalArcDesc":"הושלמה",
+               "PashApprovalArcDate":  "20.03.200", 
+               "UserNameMamap":  "יניב",
+               "PhaseApprovalMamapCode": 2, 
+               "PhaseApprovalMamapDesc":"טרם הושלמה",
+               "PashApprovalMamapDate":   "20.02.2023" , 
+               "BusinessLevelStatusDate": "20.12.2024",
+               "InvalidDocsCount":  2,
+               "Contracts" : []
+              },
+              {
+               "ProjectId": "1",
+               "LevelCode": 4,
+               "Description": "הסדרי תנועה",
+               "StartBusinessLevelDate": "12.02.2013",
+               "BusinessLevelControlStatusCode": 3,
+               "BusinessLevelControlStatusDesc": "טרם החל השלב",
+               "UserNameArchiv": "אשר", 
+               "PhaseApprovalArcCode": 1,
+               "PhaseApprovalArcDesc":"בקרה הושלמה",
+               "PashApprovalArcDate":  "20.03.200", 
+               "UserNameMamap":  "יניב",
+               "PhaseApprovalMamapCode": 1, 
+               "PhaseApprovalMamapDesc": "בקרה הושלמה" , 
+               "PashApprovalMamapDate":   "20.02.2023" , 
+               "BusinessLevelStatusDate": "20.12.2024",
+               "InvalidDocsCount":  2,
+               "Contracts" : []
+              },
+              {
+               "ProjectId": "1",
+               "LevelCode": 5,
+               "Description": "סטטוטוריקה",
+               "StartBusinessLevelDate": "12.02.2013",
+               "BusinessLevelControlStatusCode": 3,
+               "BusinessLevelControlStatusDesc": "טרם החל השלב ",
+               "UserNameArchiv": "אשר", 
+               "PhaseApprovalArcCode": 2,
+               "PhaseApprovalArcDesc":"טרם הושלמה",
+               "PashApprovalArcDate":  "20.03.200", 
+               "UserNameMamap":  "יניב",
+               "PhaseApprovalMamapCode": 2, 
+               "PhaseApprovalMamapDesc": "טרם הושלמה", 
+               "PashApprovalMamapDate":   "20.02.2023" , 
+               "BusinessLevelStatusDate": "20.12.2024",
+               "InvalidDocsCount":  2,
+               "Contracts" : []
+              },
+              {
+               "ProjectId": "1",
+               "LevelCode": 6,
+               "Description": "מקרקעין",
+               "StartBusinessLevelDate": "12.02.2013",
+               "BusinessLevelControlStatusCode": 3,
+               "BusinessLevelControlStatusDesc": "טרם החל השלב",
+               "UserNameArchiv": "אשר", 
+               "PhaseApprovalArcCode": 1,
+               "PhaseApprovalArcDesc": "הושלמה",
+               "PashApprovalArcDate":  "20.03.200", 
+               "UserNameMamap":  "יניב",
+               "PhaseApprovalMamapCode": 1, 
+               "PhaseApprovalMamapDesc": "הושלמה",
+               "PashApprovalMamapDate":   "20.02.2023" , 
+               "BusinessLevelStatusDate": "20.12.2024",
+               "InvalidDocsCount":  2,
+               "Contracts" : []
+              },
+              {
+               "ProjectId": "1",
+               "LevelCode": 7,
+               "Description": "בקרת איכות",
+               "StartBusinessLevelDate": "12.02.2013",
+               "BusinessLevelControlStatusCode": 3,
+               "BusinessLevelControlStatusDesc": "טרם החל השלב",
+               "UserNameArchiv": "אשר", 
+               "PhaseApprovalArcCode":3,
+               "PhaseApprovalArcDesc":"טרם הושלמה",
+               "PashApprovalArcDate":  "20.03.200", 
+               "UserNameMamap":  "יניב",
+               "PhaseApprovalMamapCode": 3,
+               "PhaseApprovalMamapDesc": "תקין" , 
+               "PashApprovalMamapDate":   "20.02.2023" , 
+               "BusinessLevelStatusDate": "20.12.2024",
+               "InvalidDocsCount":  2,
+               "Contracts" : []
+              },
+              {
+               "ProjectId": "1",
+               "LevelCode": 8,
+               "Description": "חשבון סופי קבלן",
+               "StartBusinessLevelDate":  "12.02.2013",
+               "BusinessLevelControlStatusCode": 2,
+               "BusinessLevelControlStatusDesc": "בקרה טרם הושלמה",
+               "UserNameArchiv": "אשר", 
+               "PhaseApprovalArcCode":3,
+               "PhaseApprovalArcDesc": "טרם הושלמה",
+               "PashApprovalArcDate":  "20.03.200", 
+               "UserNameMamap":  "יניב",
+               "PhaseApprovalMamapCode": 3,
+               "PhaseApprovalMamapDesc": "תקין" , 
+               "PashApprovalMamapDate":   "20.02.2023" , 
+               "BusinessLevelStatusDate": "20.12.2024",
+               "InvalidDocsCount": 2,
+               "Contracts" : [
+                  {
+                     "ContractName":  4100020721, 
+                     "ContractControlStatusDesc":  "טרם החל השלב" , 
+                     "ContractControlStatusCode": 2 , 
+                     "ContractControlStatusDate": "23.02.2003" , 
+                     "InvalidContractDocsCount": 2
+                  },
+                  {
+                      "ContractName":  4100020722, 
+                      "ContractControlStatusDesc":  "טרם החל השלב" , 
+                      "ContractControlStatusCode": 2 ,  
+                      "ContractControlStatusDate": "23.02.2023" , 
+                      "InvalidContractDocsCount": 3
+                   }
+               ]
+              },
+              {
+               "ProjectId": "1",
+               "LevelCode": 9,
+               "Description": "ביצוע ",
+               "StartBusinessLevelDate": "טרם החל השלב",
+               "BusinessLevelControlStatusCode": 2,
+               "BusinessLevelControlStatusDesc": "בקרה טרם הושלמה",
+               "UserNameArchiv": "אשר", 
+               "PhaseApprovalArcCode":3,
+               "PhaseApprovalArcDesc": "טרם הושלמה",
+               "PashApprovalArcDate":  "20.03.200", 
+               "UserNameMamap":  "יניב",
+               "PhaseApprovalMamapCode": 3,
+               "PhaseApprovalMamapDesc": "תקין" , 
+               "PashApprovalMamapDate":   "20.02.2023" , 
+               "BusinessLevelStatusDate": "20.12.2024",
+               "InvalidDocsCount":  2,
+               "Contracts" : [
+                   {
+                      "ContractName":  "4100020721", 
+                      "ContractControlStatusDesc":  "טרם החל השלב" , 
+                      "ContractControlStatusCode": 2 , 
+                      "ContractControlStatusDate": "23.02.2003" , 
+                      "InvalidContractDocsCount": 1
+                   },
+                   {
+                       "ContractName":  "4100020722", 
+                       "ContractControlStatusDesc":  "טרם החל השלב" , 
+                       "ContractControlStatusCode": 2 ,
+                       "ContractControlStatusDate": "23.02.2023" , 
+                       "InvalidContractDocsCount": 0
+                    }
+               ]
+              }
+              
+         ]
+   }
+
+
+

@@ -1,0 +1,42 @@
+
+   {
+    
+      "Status": 0,
+      "Messages":["אין שגיאה"],
+    "Data": [
+
+         {
+          "ProjectId": "1",
+          "LevelCode": 8,
+          "Description": "חשבון סופי קבלן",
+          "StartBusinessLevelDate":  "12.02.2013",
+          "BusinessLevelControlStatusCode": "טרם החל השלב",
+          "UserNameArchiv": "אשר", 
+          "PhaseApprovalArcCode": 2,
+          "PashApprovalArcDate":  "20.03.200", 
+          "UserNameMamap":  "יניב",
+          "PhaseApprovalMamapCode": "תקין" , 
+          "PashApprovalMamapDate":   "20.02.2023" , 
+          "BusinessLevelStatusDate": "20.12.2024",
+          "InvalidDocsCount": 2,
+          "Contracts" : [
+             {
+                "ContractName":  4100020721, 
+                "ContractControlStatusCode": "טרם החל השלב" , 
+                "ContractControlStatusDate": "23.02.2003" , 
+                "InvalidContractDocsCount": "לא תקין"
+             },
+             {
+                 "ContractName":  4100020722, 
+                 "ContractControlStatusCode": "טרם החל השלב" , 
+                 "ContractControlStatusDate": "23.02.2023" , 
+                 "InvalidContractDocsCount": "לקין"
+              }
+          ]
+         }
+
+         
+    ]
+
+   }
+   

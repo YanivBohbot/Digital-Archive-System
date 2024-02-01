@@ -1,0 +1,435 @@
+.mat-mdc-checkbox.mat-accent .mdc-checkbox--selected ~ .mdc-checkbox__ripple {
+  background: #006699;
+}
+
+body {
+  background-color: #f6f6f6;
+  color: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.for-screnReader {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.display-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.display-flex.display-flex-center {
+  justify-content: center;
+}
+
+.display-flex.display-flex-start {
+  justify-content: flex-start;
+}
+
+.display-flex.display-flex-end {
+  justify-content: flex-end;
+}
+
+.display-flex.display-flex-top {
+  align-items: flex-start;
+}
+
+.display-flex.display-flex-bottom {
+  align-items: flex-end;
+}
+
+.display-flex.display-flex-baseline {
+  align-items: baseline;
+}
+
+.display-flex.display-flex-stretch {
+  align-items: stretch;
+}
+
+.display-flex.wrap {
+  flex-wrap: wrap;
+}
+
+.display-flex .flex1 {
+  flex: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.generalSpacing.PB30 {
+  padding-bottom: 30px;
+}
+
+.generalSpacing.PB20 {
+  padding-bottom: 20px;
+}
+
+.generalSpacing.PB10 {
+  padding-bottom: 10px;
+}
+
+.generalSpacing.PB12 {
+  padding-bottom: 10px;
+}
+
+.generalSpacing.PB8 {
+  padding-bottom: 8px;
+}
+
+.generalSpacing.PB5 {
+  padding-bottom: 5px;
+}
+
+.generalSpacing.PT20 {
+  padding-top: 20px;
+}
+
+.generalSpacing.PT10 {
+  padding-top: 10px;
+}
+
+.generalSpacing.PT7 {
+  padding-top: 7px;
+}
+
+.generalSpacing.PL5 {
+  padding-left: 5px;
+}
+
+h1,
+h2,
+.mat-h2,
+.mat-title,
+.mat-typography h2,
+h3,
+.mat-h3,
+.mat-title,
+.mat-typography h3,
+.mat-body p,
+.mat-body-1 p,
+.mat-typography p,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Assistant-Bold", "Assistant Bold", "Assistant", sans-serif !important;
+}
+
+h1.pt15,
+h2.pt15,
+.mat-h2.pt15,
+.mat-title.pt15,
+.mat-typography h2.pt15,
+h3.pt15,
+.mat-h3.pt15,
+.mat-title.pt15,
+.mat-typography h3.pt15,
+.mat-body p.pt15,
+.mat-body-1 p.pt15,
+.mat-typography p.pt15,
+p.pt15 {
+  padding-top: 15px;
+}
+
+h1.pt7,
+h2.pt7,
+.mat-h2.pt7,
+.mat-title.pt7,
+.mat-typography h2.pt7,
+h3.pt7,
+.mat-h3.pt7,
+.mat-title.pt7,
+.mat-typography h3.pt7,
+.mat-body p.pt7,
+.mat-body-1 p.pt7,
+.mat-typography p.pt7,
+p.pt7 {
+  padding-top: 7px;
+}
+
+h1.pb10,
+h2.pb10,
+.mat-h2.pb10,
+.mat-title.pb10,
+.mat-typography h2.pb10,
+h3.pb10,
+.mat-h3.pb10,
+.mat-title.pb10,
+.mat-typography h3.pb10,
+.mat-body p.pb10,
+.mat-body-1 p.pb10,
+.mat-typography p.pb10,
+p.pb10 {
+  padding-bottom: 10px;
+}
+
+h1.pb12,
+h2.pb12,
+.mat-h2.pb12,
+.mat-title.pb12,
+.mat-typography h2.pb12,
+h3.pb12,
+.mat-h3.pb12,
+.mat-title.pb12,
+.mat-typography h3.pb12,
+.mat-body p.pb12,
+.mat-body-1 p.pb12,
+.mat-typography p.pb12,
+p.pb12 {
+  padding-bottom: 12px;
+}
+
+h1.pb20,
+h2.pb20,
+.mat-h2.pb20,
+.mat-title.pb20,
+.mat-typography h2.pb20,
+h3.pb20,
+.mat-h3.pb20,
+.mat-title.pb20,
+.mat-typography h3.pb20,
+.mat-body p.pb20,
+.mat-body-1 p.pb20,
+.mat-typography p.pb20,
+p.pb20 {
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-weight: 700;
+  color: #333333;
+  text-align: right;
+  font-size: 18px;
+}
+
+h2.fz16 {
+  font-size: 16px;
+}
+
+h2.fz24 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+p.status-success,
+span.status-success {
+  color: #4b7902;
+}
+
+p.status-failed,
+span.status-failed {
+  color: #d9001b;
+}
+
+p.status-before,
+span.status-before {
+  color: #7f7f7f;
+}
+
+.opasity5 {
+  opacity: 0.5;
+}
+
+.accentColor1 {
+  color: #006699;
+}
+
+.status-success {
+  color: #4b7902;
+}
+
+.status-failed {
+  color: #d9001b;
+}
+
+.status-before {
+  color: #7f7f7f;
+}
+
+.CursorPointer {
+  cursor: pointer;
+}
+
+.generalWrap {
+  padding: 13px 20px 0 20px;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .generalWrap {
+    padding: 13px 10px 0 10px;
+  }
+}
+
+.dirEn {
+  direction: ltr;
+}
+
+ul.listStyle {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+ul.listStyle span {
+  display: inline-block;
+}
+
+ul.listStyle span.bold {
+  font-weight: 700;
+}
+
+ul.listStyle span.w150 {
+  width: 150px;
+}
+
+ul.listStyle.lipb10 li {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  ul.listStyle.separatorList {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+ul.listStyle.separatorList li {
+  position: relative;
+  padding-left: 13px;
+}
+
+ul.listStyle.separatorList li::before {
+  content: "|";
+  background-color: transparent;
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 6px;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  ul.listStyle.separatorList li::before {
+    display: none;
+  }
+}
+
+ul.listStyle.separatorList li.bold {
+  font-weight: 700;
+}
+
+ul.listStyle.separatorList li.withoutSeparator::before {
+  display: none;
+}
+
+ul.listStyle.separatorList li .bold {
+  padding-left: 4px;
+}
+
+ul.listStyle.statusesList {
+  background-color: #f6f6f6;
+  border: 1px solid #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  padding: 5px 25px;
+}
+
+ul.listStyle.statusesList li {
+  position: relative;
+  padding-left: 13px;
+  font-weight: 700;
+}
+
+ul.listStyle.statusesList li::before {
+  content: "|";
+  background-color: transparent;
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 6px;
+  z-index: 1;
+}
+
+ul.listStyle.statusesList li:last-child::before {
+  display: none;
+}
+
+ul.listStyle.statusesList li span.status {
+  color: #7f7f7f;
+  padding-right: 5px;
+}
+
+ul.listStyle.statusesList li span.statusSuccess {
+  color: #4b7902;
+}
+
+ul.listStyle.statusesList li span.statusFailed {
+  color: #d9001b;
+}
+
+ul.listStyle.contractList {
+  background-color: #f6f6f6;
+  border: 1px solid #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+ul.listStyle.contractList li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-left: 1px solid #dddddd;
+  padding: 9px 27px;
+}
+
+ul.listStyle.contractList li.active {
+  background-color: #ffffff;
+}
+
+ul.listStyle.contractList li.active::before {
+  content: "";
+  background-color: #006699;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+ul.listStyle.contractList li:last-child {
+  border-left: 0;
+}
+
+ul.listStyle.contractList li span.contractStatus {
+  color: #7f7f7f;
+  font-weight: 500;
+  padding-top: 3px;
+}

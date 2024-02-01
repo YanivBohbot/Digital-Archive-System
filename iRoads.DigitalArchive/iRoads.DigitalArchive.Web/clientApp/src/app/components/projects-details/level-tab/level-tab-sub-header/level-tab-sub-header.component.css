@@ -1,0 +1,57 @@
+@media (max-width: 900px) {
+  .statusesRowWrap {
+    flex-direction: column-reverse;
+  }
+  .statusesRowWrap .btn-wrap {
+    width: 100%;
+  }
+  .statusesRowWrap .btn-wrap .btn.green-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .statusesRowWrap .statusesWrap {
+    width: 100%;
+  }
+}
+
+.statusesRowWrap .statusesWrap ul.listStyle.statusesList {
+  min-width: 450px;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .statusesRowWrap .statusesWrap ul.listStyle.statusesList {
+    min-width: unset;
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  .statusesRowWrap .statusesWrap ul.listStyle.statusesList li {
+    width: 100%;
+    text-align: center;
+  }
+  .statusesRowWrap .statusesWrap ul.listStyle.statusesList li::before {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .listStyle.contractList {
+    flex-direction: column;
+    width: 100%;
+    border: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .listStyle.contractList li {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #dddddd;
+    margin-bottom: 5px;
+  }
+}
